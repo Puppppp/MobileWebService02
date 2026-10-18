@@ -1,0 +1,950 @@
+--------- beginning of main
+10-18 13:03:45.242   806  4033 W libbinder.ServiceManagerCppClient: Waited one second for android.hardware.uwb.IUwb/default (is service started? Number of threads started in the threadpool: 32. Are binder threads started and available?)
+10-18 13:03:45.253   318  5477 W libc    : Unable to set property "ctl.interface_start" to "aidl/android.hardware.uwb.IUwb/default": PROP_ERROR_HANDLE_CONTROL_MESSAGE (0x20)
+--------- beginning of kernel
+10-18 13:03:45.192     0     0 I servicemanager: Caller(pid=806,uid=1000,sid=u:r:system_server:s0) Since 'android.hardware.uwb.IUwb/default' could not be found trying to start it as a lazy AIDL service. (if it's not configured to be a lazy service, it may be stuck starting or still starting).
+10-18 13:03:45.211     0     0 E init    : Control message: Could not find 'aidl/android.hardware.uwb.IUwb/default' for ctl.interface_start from pid: 318 (/system/bin/servicemanager)
+10-18 13:03:45.213     0     0 I servicemanager: Caller(pid=806,uid=1000,sid=u:r:system_server:s0) Tried to start aidl service android.hardware.uwb.IUwb/default as a lazy service, but was unable to. Usually this happens when a service is not installed, but if the service is intended to be used as a lazy service, then it may be configured incorrectly.
+10-18 13:03:45.303   575   575 I adbd    : adbd service requested 'shell,v2,TERM=xterm,raw:am force-stop com.example.photoviewer'
+--------- beginning of system
+10-18 13:03:45.322   806  2871 I ActivityManager: Force stopping com.example.photoviewer appid=10230 user=0: from pid 5482
+10-18 13:03:45.338  5398  5468 W libbinder.ServiceManagerCppClient: Waited one second for android.hardware.nfc.INfc/default (is service started? Number of threads started in the threadpool: 16. Are binder threads started and available?)
+10-18 13:03:45.337   806  2871 I ActivityManager: Killing 3273:com.example.photoviewer/u0a230 (adj 0): stop com.example.photoviewer due to from pid 5482
+10-18 13:03:45.342   806  2871 W ActivityTaskManager: Force removing ActivityRecord{35711732 u0 com.example.photoviewer/.MainActivity t59 f}: app died, no saved state
+10-18 13:03:45.347   806  2871 D DifferentDisplayCheck: Focus lost for Task Task{c52921d #59 type=standard A=10230:com.example.photoviewer} on display 0
+10-18 13:03:45.287     0     0 I servicemanager: Caller(pid=5398,uid=1027,sid=u:r:nfc:s0) Since 'android.hardware.nfc.INfc/default' could not be found trying to start it as a lazy AIDL service. (if it's not configured to be a lazy service, it may be stuck starting or still starting).
+10-18 13:03:45.311     0     0 E init    : Control message: Could not find 'aidl/android.hardware.nfc.INfc/default' for ctl.interface_start from pid: 318 (/system/bin/servicemanager)
+10-18 13:03:45.354   551   572 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0x7fdad1e720e0) with descriptor: '(not cached)'
+10-18 13:03:45.355 10380 10397 V WindowManagerShell: Transition requested (#124): android.os.BinderProxy@2707f4c TransitionRequestInfo { type = CLOSE, triggerTask = TaskInfo{userId=0 taskId=59 effectiveUid=10230 seqId=0 displayId=0 isRunning=false baseIntent=Intent { flg=0x10000000 cmp=com.example.photoviewer/.MainActivity } baseActivity=null topActivity=null origActivity=null realActivity=ComponentInfo{com.example.photoviewer/com.example.photoviewer.MainActivity} realActivityIsAppLockEnabled=false numActivities=0 lastActiveTime=6222509 supportsMultiWindow=true supportsMultiWindowWithoutConstraints=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{android.os.BinderProxy@2b24f2f} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 0 - 0, 0) topActivityInfo=null launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=true isInteractive=true isVisible=true isVisibleRequested=true isTopActivityNoDisplay=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false isActivityStackTransparent=true lastNonFullscreenBounds=null leafTaskBoundsFromOptions= false capturedLink=null capturedLinkTimestamp=0 requestedVisibleTypes=503 topActivityRequestOpenInBrowserEducationTimestamp=0 appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false isLeafTask= true eligibleForLetterboxEducation= false isLetterboxEducationEnabled= false isLetterboxDoubleTapEnabled= false eligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 topActivityAppBounds=Rect(0, 0 - 0, 0) isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false hasMinAspectRatioOverride=false topActivityLetterboxBounds=null topNonResizableActivityAspectRatio=-1.0 idealTaskOrientation=-1} topActivityMainWindowFrame=null}, pipChange = null, remoteTransitionInfo = null, displayChanges = null, requestedLocation = null, userChange = null, windowingLayerChange = null, fullscreenRequestChange = null, flags = 0, debugId = 124 }
+10-18 13:03:45.356 10380 10397 V ShellDesktopMode: skipping handleRequest reason=triggerTask's display doesn't support desktop mode
+10-18 13:03:45.357   318  5488 W libc    : Unable to set property "ctl.interface_start" to "aidl/android.hardware.nfc.INfc/default": PROP_ERROR_HANDLE_CONTROL_MESSAGE (0x20)
+10-18 13:03:45.319     0     0 I servicemanager: Caller(pid=5398,uid=1027,sid=u:r:nfc:s0) Tried to start aidl service android.hardware.nfc.INfc/default as a lazy service, but was unable to. Usually this happens when a service is not installed, but if the service is intended to be used as a lazy service, then it may be configured incorrectly.
+10-18 13:03:45.364   806  2871 D DifferentDisplayCheck: Focus gained for Task Task{e39e561 #7 type=home I=com.google.android.apps.nexuslauncher/.NexusLauncherActivity} on display 0
+10-18 13:03:45.369   806  2871 V WindowManager: Defer transition id=124 for TaskFragmentTransaction=android.os.Binder@99a4300 organizer (pid=3280, uid=10189)
+10-18 13:03:45.362  3280  3280 D ViewRootImpl: Skipping stats log for color mode
+10-18 13:03:45.362  3280  3280 D BaseActivity: Launcher flags updated: [state_started] +[state_started]
+10-18 13:03:45.362  3280  3280 D BaseActivity: Launcher flags updated: [state_started|state_resumed|state_user_active] +[state_resumed|state_user_active]
+10-18 13:03:45.362   806  1692 W InputDispatcher: channel 'abdbe23 com.example.photoviewer/com.example.photoviewer.MainActivity' ~ Consumer closed input channel or an error occurred.  events=0x9
+10-18 13:03:45.362   806  1692 E InputDispatcher: channel 'abdbe23 com.example.photoviewer/com.example.photoviewer.MainActivity' ~ Channel is unrecoverably broken and will be disposed!
+10-18 13:03:45.362   806  1692 I WindowManager: WINDOW DIED Window{abdbe23 u0 com.example.photoviewer/com.example.photoviewer.MainActivity}
+10-18 13:03:45.374  3280  3280 D BaseActivity: Launcher flags updated: [state_started|state_resumed|state_user_active] +[]
+10-18 13:03:45.374  3280  3280 D BaseActivity: Launcher flags updated: [state_started|state_resumed|state_deferred_resumed|state_user_active] +[state_deferred_resumed]
+10-18 13:03:45.374  3280  3280 D StatsLog: LAUNCHER_ONRESUME
+10-18 13:03:45.374  3280  3280 D SmartspaceInteractor: notifySmartspaceEvent: SmartspaceTargetEvent{mSmartspaceTarget=null, mSmartspaceActionId='null', mEventType=6}
+10-18 13:03:45.378   575   575 I adbd    : Remote process closed the socket (on MSG_PEEK)
+10-18 13:03:45.383   489   524 I netd    : tetherGetStats() -> {[]} <10.34ms>
+10-18 13:03:45.385   806  3112 I AppWidgetServiceImpl: No new profiles to load for user 0 profileIds: [0]
+10-18 13:03:45.388   806   863 W ActivityManager: setHasOverlayUi called on unknown pid: 3273
+10-18 13:03:45.386   491   491 I Zygote  : Process 3273 exited due to signal 9 (Killed)
+10-18 13:03:45.390   806  3548 V ActivityManager: Got obituary of 3273:com.example.photoviewer
+10-18 13:03:45.392   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.396 10380 10397 W Looper  : Slow dispatch took 41ms wmshell.main app=com.android.systemui main=false group=FOREGROUND h=android.os.Handler c=com.android.wm.shell.transition.Transitions$ShellTransitionImpl$$ExternalSyntheticLambda1@1778b95 m=0
+10-18 13:03:45.386  3280  3280 I Surface : Creating surface for consumer unnamed-3280-137 with slotExpansion=1 for 64 slots
+10-18 13:03:45.394  3280  3280 I Surface : Creating surface for consumer VRI[NexusLauncherActivity]#52(BLAST Consumer)52 with slotExpansion=1 for 64 slots
+10-18 13:03:45.394  3280  3280 D BaseDepthController: setSurface:
+10-18 13:03:45.394  3280  3280 D BaseDepthController: 	mWaitingOnSurfaceValidity: false
+10-18 13:03:45.394  3280  3280 D BaseDepthController: 	mBaseSurface: Surface(name=VRI-com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#1150)/@0xb1c0a70
+10-18 13:03:45.394  3280  3280 V BaseDepthController: Applying blur: 0 to Surface(name=VRI-com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#1150)/@0xb1c0a70 applyImmediately: false
+10-18 13:03:45.400  4189  4693 I AiAiEcho: Predicting[0]:  [CONTEXT sampling_count=5 ]
+10-18 13:03:45.394  3280  3360 D QuickstepModelDelegate: notifyAppTargetEvent action=1 launchLocation=workspace/0/[-1,-1]/[1,1]
+10-18 13:03:45.394  3280  3280 D BaseDepthController: shouldBlurWorkspace: false targetState: Normal currentStableState: Normal mCurrentBlur: 0 mLauncher.getDepthBlurTargets(): [com.android.launcher3.Workspace{8bec1e9 V.ED..... .......D 0,0-1080,2400 #7f0a0499 app:id/workspace}, com.android.launcher3.Hotseat{b83be6e V.ED..... .......D 0,1905-1080,2400 #7f0a01f6 app:id/hotseat}]
+10-18 13:03:45.401  4189  4693 I AiAiEcho: EchoTargets: 
+10-18 13:03:45.401  4189  4693 I AiAiEcho: Filtered by AiAi flag check: 
+10-18 13:03:45.401  4189  4693 I AiAiEcho: [CONTEXT ratelimit_period="10 SECONDS" ]
+10-18 13:03:45.402  4189  4693 I AiAiEcho: #remoteViewsTwiddler: feature disabled.
+10-18 13:03:45.404  4189  4693 I AiAiEcho: #postPredictionTargets: Sending updates to UISurface home with targets# 0 (types=[])
+10-18 13:03:45.405 10380 10397 V RecentTasksController: Notify recent tasks changed: 1
+10-18 13:03:45.405 10380 10397 W Looper  : Slow delivery took 31ms wmshell.main app=com.android.systemui main=false group=FOREGROUND h=android.os.Handler c=null m=17
+10-18 13:03:45.402   806   874 I libprocessgroup: Removed cgroup /sys/fs/cgroup/apps/uid_10230/pid_3273
+10-18 13:03:45.413   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.414   806  4371 D WindowManager: setClientSurface Surface(name=VRI-com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#1150)/@0x14986df for 685790e com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity
+10-18 13:03:45.425   806  2592 I AppWidgetServiceImpl: Received broadcast: android.intent.action.PACKAGE_RESTARTED on user 0
+10-18 13:03:45.425   806  2592 I AppWidgetServiceImpl: Updating package stopped masked state for uid 10230 package com.example.photoviewer isStopped true
+10-18 13:03:45.432  3026  3026 D CarrierSvcBindHelper: onHandleForceStop: [com.example.photoviewer]
+10-18 13:03:45.436   806  2871 V WindowManager: Continue transition id=124 for TaskFragmentTransaction=android.os.Binder@99a4300
+10-18 13:03:45.437 10380 10397 D WindowManagerShell: setLauncherKeepClearAreaHeight: visible=true, height=495
+10-18 13:03:45.437 10380 10397 W Looper  : Drained
+10-18 13:03:45.441 10380 10460 D WallpaperService: onVisibilityChanged(true): com.android.systemui.wallpapers.ImageWallpaper$CanvasEngine@c9247f6
+10-18 13:03:45.438  3026  3026 D CarrierSvcBindHelper: No carrier app for: 0
+10-18 13:03:45.443   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.466  3280  3280 D TopTaskTracker: handleTaskMovedToFront: TaskInfo{userId=0 taskId=7 effectiveUid=10189 seqId=0 displayId=0 isRunning=true baseIntent=Intent { act=android.intent.action.MAIN cat=[android.intent.category.HOME] flg=0x10000100 cmp=com.google.android.apps.nexuslauncher/.NexusLauncherActivity } baseActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} origActivity=null realActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} realActivityIsAppLockEnabled=false numActivities=1 lastActiveTime=6221670 supportsMultiWindow=true supportsMultiWindowWithoutConstraints=true resizeMode=2 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{android.os.BinderProxy@e40f96} topActivityType=2 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 128 - 0, 0) topActivityInfo=ActivityInfo{442c9e1 com.google.android.apps.nexuslauncher.NexusLauncherActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isInteractive=false isVisible=false isVisibleRequested=false isTopActivityNoDisplay=false isSleeping=false locusId=LocusId[17_chars] displayAreaFeatureId=1 isTopActivityTransparent=false isActivityStackTransparent=false lastNonFullscreenBounds=null leafTaskBoundsFromOptions= false capturedLink=null capturedLinkTimestamp=0 requestedVisibleTypes=503 topActivityRequestOpenInBrowserEducationTimestamp=0 appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false isLeafTask= true eligibleForLetterboxEducation= false isLetterboxEducationEnabled= true isLetterboxDoubleTapEnabled= false eligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 topActivityAppBounds=Rect(0, 0 - 1080, 2400) isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false hasMinAspectRatioOverride=false topActivityLetterboxBounds=null topNonResizableActivityAspectRatio=-1.0 idealTaskOrientation=5} topActivityMainWindowFrame=null}
+10-18 13:03:45.466  3280  3280 D RecentTasksList: invalidateLoadedTasks - previous requestLoadId: -1
+10-18 13:03:45.474  3280  3280 D SsBaseTemplateCard: Passed-in item info is null
+10-18 13:03:45.474  3280  3280 D SsBaseTemplateCard: Passed-in item info is null
+10-18 13:03:45.474  3280  3280 D SsBaseTemplateCard: Passed-in item info is null
+10-18 13:03:45.474  3280  3280 D SsBaseTemplateCard: Passed-in item info is null
+10-18 13:03:45.474  3280  3280 I SsBaseTemplateCard: Secondary card pane is null
+10-18 13:03:45.479   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.479   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.490 10380 27973 V WindowManagerShell: onTransitionReady(transaction=3461743646860)
+10-18 13:03:45.498 10380 10397 V WindowManagerShell: onTransitionReady (#124) android.os.BinderProxy@2707f4c: {id=124 t=CLOSE f=0x0 trk=0 r=[0@Point(0, 0)] c=[
+10-18 13:03:45.498 10380 10397 V WindowManagerShell:         {m=TO_FRONT f=SHOW_WALLPAPER|MOVE_TO_TOP|FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=1#485)/@0x2cc4438 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0 taskParent=-1 winMode=1 userId=0},
+10-18 13:03:45.498 10380 10397 V WindowManagerShell:         {m=CLOSE f=FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=59#1136)/@0x9124c11 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0 taskParent=-1 winMode=1 userId=0},
+10-18 13:03:45.498 10380 10397 V WindowManagerShell:         {m=TO_FRONT f=IS_WALLPAPER leash=Surface(name=WallpaperWindowToken{a99246f}#55)/@0x61dc176 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0}
+10-18 13:03:45.498 10380 10397 V WindowManagerShell:     ]}
+10-18 13:03:45.498 10380 10397 V WindowManagerShell: FocusTransitionObserver: Updating focus state for transition #124
+10-18 13:03:45.498 10380 10397 D WindowManagerShell: FocusTransitionObserver: Focus updated on displayId=0 to taskId=1
+10-18 13:03:45.498 10380 10397 V WindowManagerShell: FocusTransitionObserver: Notifying local listeners of task focus change: taskId=1, isFocusedOnDisplay=true, isFocusedGlobally=true
+10-18 13:03:45.498 10380 10397 V RecentTasksController: Notify recent tasks changed: 2
+10-18 13:03:45.498 10380 10397 V WindowManagerShell: FocusTransitionObserver: Notifying local listeners of task focus change: taskId=59, isFocusedOnDisplay=false, isFocusedGlobally=false
+10-18 13:03:45.498 10380 10397 V WindowManagerShell: Playing animation for (#124) android.os.BinderProxy@2707f4c@0
+10-18 13:03:45.490  3280  3280 D RecentTasksList: invalidateLoadedTasks - previous requestLoadId: -1
+10-18 13:03:45.498 10380 10397 D ShellSplitScreen: startAnimation: transition=124 isSplitActive=false
+10-18 13:03:45.498   806   859 V WindowManager: Sent Transition (#124) createdAt=10-18 13:03:45.343 via request=TransitionRequestInfo { type = CLOSE, triggerTask = TaskInfo{userId=0 taskId=59 effectiveUid=10230 seqId=0 displayId=0 isRunning=false baseIntent=Intent { flg=0x10000000 cmp=com.example.photoviewer/.MainActivity } baseActivity=null topActivity=null origActivity=null realActivity=ComponentInfo{com.example.photoviewer/com.example.photoviewer.MainActivity} realActivityIsAppLockEnabled=false numActivities=0 lastActiveTime=6222509 supportsMultiWindow=true supportsMultiWindowWithoutConstraints=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{RemoteToken{bbacbc1 Task{c52921d #59 type=standard A=10230:com.example.photoviewer}}} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 0 - 0, 0) topActivityInfo=null launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=true isInteractive=true isVisible=true isVisibleRequested=true isTopActivityNoDisplay=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false isActivityStackTransparent=true lastNonFullscreenBounds=null leafTaskBoundsFromOptions= false capturedLink=null capturedLinkTimestamp=0 requestedVisibleTypes=503 topActivityRequestOpenInBrowserEducationTimestamp=0 appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false isLeafTask= true eligibleForLetterboxEducation= false isLetterboxEducationEnabled= false isLetterboxDoubleTapEnabled= false eligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 topActivityAppBounds=Rect(0, 0 - 0, 0) isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false hasMinAspectRatioOverride=false topActivityLetterboxBounds=null topNonResizableActivityAspectRatio=-1.0 idealTaskOrientation=-1} topActivityMainWindowFrame=null}, pipChange = null, remoteTransitionInfo = null, displayChanges = null, requestedLocation = null, userChange = null, windowingLayerChange = null, fullscreenRequestChange = null, flags = 0, debugId = 124 }
+10-18 13:03:45.498   806   859 V WindowManager:     startWCT=WindowContainerTransaction { changes= {} hops= [] flags= 0 errorCallbackToken=null taskFragmentOrganizer=null }
+10-18 13:03:45.498   806   859 V WindowManager:     info={id=124 t=CLOSE f=0x0 trk=0 r=[0@Point(0, 0)] c=[
+10-18 13:03:45.498   806   859 V WindowManager:         {WCT{RemoteToken{c5d7749 Task{a08b058 #1 type=home}}} m=TO_FRONT f=SHOW_WALLPAPER|MOVE_TO_TOP|FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=1#485)/@0x226632f sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0 taskParent=-1 winMode=1 userId=0},
+10-18 13:03:45.498   806   859 V WindowManager:         {WCT{RemoteToken{bbacbc1 Task{c52921d #59 type=standard A=10230:com.example.photoviewer}}} m=CLOSE f=FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=59#1136)/@0xd8aac8e sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0 taskParent=-1 winMode=1 userId=0},
+10-18 13:03:45.498   806   859 V WindowManager:         {m=TO_FRONT f=IS_WALLPAPER leash=Surface(name=WallpaperWindowToken{a99246f}#55)/@0x826efa7 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0}
+10-18 13:03:45.498   806   859 V WindowManager:     ]}
+10-18 13:03:45.502   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.504 10380 10397 V ShellRecents: RecentsTransitionHandler.startAnimation: no controller found
+10-18 13:03:45.504 10380 10397 V ShellDesktopMode: No pending desktop transition
+10-18 13:03:45.504 10380 10397 V ShellDesktopMode: DesktopHomeScreenPeekTransitionHandler: startAnimation
+10-18 13:03:45.504 10380 10397 V WindowManagerShell: Transition doesn't have explicit remote, search filters for match for {id=124 t=CLOSE f=0x0 trk=0 r=[0@Point(0, 0)] c=[{m=TO_FRONT f=SHOW_WALLPAPER|MOVE_TO_TOP|FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=1#485)/@0x2cc4438 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0 taskParent=-1 winMode=1 userId=0},{m=CLOSE f=FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=59#1136)/@0x9124c11 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0 taskParent=-1 winMode=1 userId=0},{m=TO_FRONT f=IS_WALLPAPER leash=Surface(name=WallpaperWindowToken{a99246f}#55)/@0x61dc176 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0}]}
+10-18 13:03:45.504 10380 10397 V WindowManagerShell:  Checking filter Pair{{types=[OPEN,TO_FRONT] flags=0x0 notFlags=0x0 checks=[{atype=standard independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=true order=ANY topActivity=null launchCookie=null windowingMode=freeform isCrossDisplayMove=false}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@3b946aa, appThread = null, debugName = DesktopWindowLimitUnminimize, filter = {types=[OPEN,TO_FRONT] flags=0x0 notFlags=0x0 checks=[{atype=standard independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=true order=ANY topActivity=null launchCookie=null windowingMode=freeform isCrossDisplayMove=false}]} }}
+10-18 13:03:45.504 10380 10397 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0 notFlags=0x0 checks=[{atype=undefined independent=true modes=[CLOSE,TO_BACK] flags=IN_TASK_WITH_EMBEDDED_ACTIVITY mustBeTask=false order=ANY topActivity=null launchCookie=null taskFragmentToken=android.os.BinderProxy@ae7129b windowingMode=undefined isCrossDisplayMove=false}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@af05638, appThread = android.app.IApplicationThread$Stub$Proxy@9e9f611, debugName = overlayBackTransition, filter = {types=[] flags=0x0 notFlags=0x0 checks=[{atype=undefined independent=true modes=[CLOSE,TO_BACK] flags=IN_TASK_WITH_EMBEDDED_ACTIVITY mustBeTask=false order=ANY topActivity=null launchCookie=null taskFragmentToken=android.os.BinderProxy@ae7129b windowingMode=undefined isCrossDisplayMove=false}]} }}
+10-18 13:03:45.504 10380 10397 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0 notFlags=0x0 checks=[{atype=dream independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{atype=home independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=false}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@3bd2376, appThread = android.app.IApplicationThread$Stub$Proxy@b9a3d77, debugName = LauncherToDream, filter = {types=[] flags=0x0 notFlags=0x0 checks=[{atype=dream independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{atype=home independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=false}]} }}
+10-18 13:03:45.504 10380 10397 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0 notFlags=0x0 checks=[{atype=standard independent=false modes=[CHANGE] flags=NONE mustBeTask=true order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=true}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@709de4, appThread = android.app.IApplicationThread$Stub$Proxy@266e24d, debugName = QuickstepDisplayMove, filter = {types=[] flags=0x0 notFlags=0x0 checks=[{atype=standard independent=false modes=[CHANGE] flags=NONE mustBeTask=true order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=true}]} }}
+10-18 13:03:45.506   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.508 10380 10397 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0 notFlags=0x100 checks=[{atype=home independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{atype=standard independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{NOT atype=undefined independent=true modes=[] flags=NONE mustBeTask=true order=ANY topActivity=null launchCookie=null customAnim=true windowingMode=undefined isCrossDisplayMove=false}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@3500102, appThread = android.app.IApplicationThread$Stub$Proxy@2eb3a13, debugName = QuickstepLaunchHome, filter = {types=[] flags=0x0 notFlags=0x100 checks=[{atype=home independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{atype=standard independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{NOT atype=undefined independent=true modes=[] flags=NONE mustBeTask=true order=ANY topActivity=null launchCookie=null customAnim=true windowingMode=undefined isCrossDisplayMove=false}]} }}
+10-18 13:03:45.508 10380 10397 D RemoteTransitionHandler: Found filterPair{{types=[] flags=0x0 notFlags=0x100 checks=[{atype=home independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{atype=standard independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{NOT atype=undefined independent=true modes=[] flags=NONE mustBeTask=true order=ANY topActivity=null launchCookie=null customAnim=true windowingMode=undefined isCrossDisplayMove=false}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@3500102, appThread = android.app.IApplicationThread$Stub$Proxy@2eb3a13, debugName = QuickstepLaunchHome, filter = {types=[] flags=0x0 notFlags=0x100 checks=[{atype=home independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{atype=standard independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{NOT atype=undefined independent=true modes=[] flags=NONE mustBeTask=true order=ANY topActivity=null launchCookie=null customAnim=true windowingMode=undefined isCrossDisplayMove=false}]} }}
+10-18 13:03:45.508 10380 10397 V WindowManagerShell:  Delegate animation for (#124) to RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@3500102, appThread = android.app.IApplicationThread$Stub$Proxy@2eb3a13, debugName = QuickstepLaunchHome, filter = {types=[] flags=0x0 notFlags=0x100 checks=[{atype=home independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{atype=standard independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{NOT atype=undefined independent=true modes=[] flags=NONE mustBeTask=true order=ANY topActivity=null launchCookie=null customAnim=true windowingMode=undefined isCrossDisplayMove=false}]} }
+10-18 13:03:45.510 10380 10397 V WindowManagerShell:  animated by com.android.wm.shell.transition.RemoteTransitionHandler@fdf51a3
+10-18 13:03:45.518  3280  3280 D LauncherStateManager: StateManager.createAtomicAnimation: fromState: Normal, toState: Normal, partial trace:
+10-18 13:03:45.518  3280  3280 D LauncherStateManager: 	at com.android.quickstep.util.ScalingWorkspaceRevealAnim.<init>(go/retraceme fd9d0758bf4aa128afc6a457553abab416b2d3b5243d17c5825077f97151f69b:69)
+10-18 13:03:45.518  3280  3280 D LauncherStateManager: 	at com.android.launcher3.QuickstepTransitionManager$2.onHomeVisibilityChanged(go/retraceme fd9d0758bf4aa128afc6a457553abab416b2d3b5243d17c5825077f97151f69b:45)
+10-18 13:03:45.518  3280  3280 D LauncherStateManager: 	at com.android.quickstep.HomeVisibilityState$init$1$onHomeVisibilityChanged$1.run(go/retraceme fd9d0758bf4aa128afc6a457553abab416b2d3b5243d17c5825077f97151f69b:63)
+10-18 13:03:45.518  3280  3280 D AllAppsTransitionController: shouldProtectHeader: false skipScrim: true state: Normal stateManager.getState(): Normal
+10-18 13:03:45.518  3280  3280 D KeyboardInsetsHandler: removePendingImeController: pendingImeController=null
+10-18 13:03:45.518  3280  3280 V BaseDepthController: Applying blur: 0 to Surface(name=VRI-com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#1150)/@0xb1c0a70 applyImmediately: false
+10-18 13:03:45.518  3280  3280 D BaseDepthController: shouldBlurWorkspace: false targetState: Normal currentStableState: Normal mCurrentBlur: 0 mLauncher.getDepthBlurTargets(): [com.android.launcher3.Workspace{8bec1e9 V.ED..... ......ID 0,0-1080,2400 #7f0a0499 app:id/workspace}, com.android.launcher3.Hotseat{b83be6e V.ED..... ........ 0,1905-1080,2400 #7f0a01f6 app:id/hotseat}]
+10-18 13:03:45.518  3280  3280 V BaseDepthController: Applying blur: 0 to Surface(name=VRI-com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#1150)/@0xb1c0a70 applyImmediately: false
+10-18 13:03:45.518  3280  3280 D BaseDepthController: shouldBlurWorkspace: false targetState: Normal currentStableState: Normal mCurrentBlur: 0 mLauncher.getDepthBlurTargets(): [com.android.launcher3.Workspace{8bec1e9 V.ED..... ......ID 0,0-1080,2400 #7f0a0499 app:id/workspace}, com.android.launcher3.Hotseat{b83be6e V.ED..... ........ 0,1905-1080,2400 #7f0a01f6 app:id/hotseat}]
+10-18 13:03:45.518  3280  3280 D BaseActivity: Launcher flags updated: [state_started|state_resumed|state_deferred_resumed|state_user_active|state_transition_active] +[state_transition_active]
+10-18 13:03:45.522  3280  3280 D LauncherStateManager: StateManager.onStateTransitionStart: state: Normal
+10-18 13:03:45.527   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.527   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.527   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.527   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.526  3280  3280 D ConnectorStatusChecker: Connector disabled by search config flag.
+10-18 13:03:45.526  3280  3280 D LauncherStateManager: StateManager.cancelAnimation: canceling ongoing animation, partial trace:
+10-18 13:03:45.526  3280  3280 D LauncherStateManager: 	at com.android.launcher3.QuickstepTransitionManager.createWallpaperOpenAnimations(go/retraceme fd9d0758bf4aa128afc6a457553abab416b2d3b5243d17c5825077f97151f69b:168)
+10-18 13:03:45.526  3280  3280 D LauncherStateManager: 	at com.android.launcher3.QuickstepTransitionManager$WallpaperOpenLauncherAnimationRunner.onAnimationStart(go/retraceme fd9d0758bf4aa128afc6a457553abab416b2d3b5243d17c5825077f97151f69b:135)
+10-18 13:03:45.526  3280  3280 D LauncherStateManager: 	at com.android.launcher3.LauncherAnimationRunner$$ExternalSyntheticLambda2.run(go/retraceme fd9d0758bf4aa128afc6a457553abab416b2d3b5243d17c5825077f97151f69b:71)
+10-18 13:03:45.526  3280  3280 D ScalingWorkspaceRevealAnim: onAnimationCancel
+10-18 13:03:45.526  3280  3280 D ScalingWorkspaceRevealAnim: onAnimationEnd, workspace and hotseat are visible
+10-18 13:03:45.526  3280  3280 E ScalingWorkspaceRevealAnim: Unexpected invisibility after animation end: workspace.isVisible=true, workspace.alpha=1.0, hotseat.isVisible=false, hotseat.alpha=1.0
+10-18 13:03:45.526  3280  3280 E ScalingWorkspaceRevealAnim: java.lang.Exception
+10-18 13:03:45.526  3280  3280 E ScalingWorkspaceRevealAnim: 	at com.android.quickstep.util.ScalingWorkspaceRevealAnim$4.run(go/retraceme fd9d0758bf4aa128afc6a457553abab416b2d3b5243d17c5825077f97151f69b:123)
+10-18 13:03:45.526  3280  3280 E ScalingWorkspaceRevealAnim: 	at com.android.launcher3.anim.AnimatorListeners$1.onAnimationEnd(go/retraceme fd9d0758bf4aa128afc6a457553abab416b2d3b5243d17c5825077f97151f69b:2)
+10-18 13:03:45.526  3280  3280 E ScalingWorkspaceRevealAnim: 	at android.animation.Animator$AnimatorListener.onAnimationEnd(Animator.java:775)
+10-18 13:03:45.526  3280  3280 E ScalingWorkspaceRevealAnim: 	at android.animation.Animator$AnimatorCaller$$ExternalSyntheticLambda1.call(D8$$SyntheticClass:0)
+10-18 13:03:45.526  3280  3280 E ScalingWorkspaceRevealAnim: 	at android.animation.Animator.callOnList(Animator.java:733)
+10-18 13:03:45.526  3280  3280 E ScalingWorkspaceRevealAnim: 	at android.animation.Animator.notifyListeners(Animator.java:631)
+10-18 13:03:45.526  3280  3280 E ScalingWorkspaceRevealAnim: 	at android.animation.Animator.notifyEndListeners(Animator.java:656)
+10-18 13:03:45.526  3280  3280 E ScalingWorkspaceRevealAnim: 	at android.animation.Animator.completeEndAnimation(Animator.java:699)
+10-18 13:03:45.526  3280  3280 E ScalingWorkspaceRevealAnim: 	at android.animation.AnimatorSet.completeEndAnimation(AnimatorSet.java:1476)
+10-18 13:03:45.526  3280  3280 E ScalingWorkspaceRevealAnim: 	at android.animation.Animator.notifyEndListenersFromEndAnimation(Animator.java:688)
+10-18 13:03:45.526  3280  3280 E ScalingWorkspaceRevealAnim: 	at android.animation.AnimatorSet.endAnimation(AnimatorSet.java:1466)
+10-18 13:03:45.526  3280  3280 E ScalingWorkspaceRevealAnim: 	at android.animation.AnimatorSet.endAnimation(AnimatorSet.java:1449)
+10-18 13:03:45.526  3280  3280 E ScalingWorkspaceRevealAnim: 	at android.animation.AnimatorSet.endAnimationAndNotifyEndListenersImmediately(AnimatorSet.java:439)
+10-18 13:03:45.526  3280  3280 E ScalingWorkspaceRevealAnim: 	at android.animation.AnimatorSet.cancel(AnimatorSet.java:427)
+10-18 13:03:45.526  3280  3280 E ScalingWorkspaceRevealAnim: 	at com.android.launcher3.statemanager.StateManager.cancelAnimation(go/retraceme fd9d0758bf4aa128afc6a457553abab416b2d3b5243d17c5825077f97151f69b:129)
+10-18 13:03:45.526  3280  3280 E ScalingWorkspaceRevealAnim: 	at com.android.launcher3.QuickstepTransitionManager.createWallpaperOpenAnimations(go/retraceme fd9d0758bf4aa128afc6a457553abab416b2d3b5243d17c5825077f97151f69b:168)
+10-18 13:03:45.526  3280  3280 E ScalingWorkspaceRevealAnim: 	at com.android.launcher3.QuickstepTransitionManager$WallpaperOpenLauncherAnimationRunner.onAnimationStart(go/retraceme fd9d0758bf4aa128afc6a457553abab416b2d3b5243d17c5825077f97151f69b:135)
+10-18 13:03:45.526  3280  3280 E ScalingWorkspaceRevealAnim: 	at com.android.launcher3.LauncherAnimationRunner$$ExternalSyntheticLambda2.run(go/retraceme fd9d0758bf4aa128afc6a457553abab416b2d3b5243d17c5825077f97151f69b:71)
+10-18 13:03:45.526  3280  3280 E ScalingWorkspaceRevealAnim: 	at android.os.Handler.handleCallback(Handler.java:1080)
+10-18 13:03:45.526  3280  3280 E ScalingWorkspaceRevealAnim: 	at android.os.Handler.dispatchMessageImpl(Handler.java:135)
+10-18 13:03:45.526  3280  3280 E ScalingWorkspaceRevealAnim: 	at android.os.Handler.dispatchMessage(Handler.java:126)
+10-18 13:03:45.526  3280  3280 E ScalingWorkspaceRevealAnim: 	at android.os.Looper.loopOnce(Looper.java:285)
+10-18 13:03:45.526  3280  3280 E ScalingWorkspaceRevealAnim: 	at android.os.Looper.loop(Looper.java:390)
+10-18 13:03:45.526  3280  3280 E ScalingWorkspaceRevealAnim: 	at android.app.ActivityThread.main(ActivityThread.java:9884)
+10-18 13:03:45.526  3280  3280 E ScalingWorkspaceRevealAnim: 	at java.lang.reflect.Method.invoke(Native Method)
+10-18 13:03:45.526  3280  3280 E ScalingWorkspaceRevealAnim: 	at com.android.internal.os.RuntimeInit$MethodAndArgsCaller.run(RuntimeInit.java:575)
+10-18 13:03:45.526  3280  3280 E ScalingWorkspaceRevealAnim: 	at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:906)
+10-18 13:03:45.526  3280  3280 V BaseDepthController: Applying blur: 79 to Surface(name=VRI-com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#1150)/@0xb1c0a70 applyImmediately: false
+10-18 13:03:45.526  3280  3280 D BaseDepthController: shouldBlurWorkspace: false targetState: Normal currentStableState: Normal mCurrentBlur: 79 mLauncher.getDepthBlurTargets(): [com.android.launcher3.Workspace{8bec1e9 V.ED..... ......ID 0,0-1080,2400 #7f0a0499 app:id/workspace}, com.android.launcher3.Hotseat{b83be6e I.ED..... ......ID 0,1905-1080,2400 #7f0a01f6 app:id/hotseat}]
+10-18 13:03:45.526  3280  3280 D LauncherStateManager: StateManager.createAtomicAnimation: fromState: Normal, toState: Normal, partial trace:
+10-18 13:03:45.526  3280  3280 D LauncherStateManager: 	at com.android.quickstep.util.WorkspaceRevealAnim.prepareToAnimate(go/retraceme fd9d0758bf4aa128afc6a457553abab416b2d3b5243d17c5825077f97151f69b:19)
+10-18 13:03:45.526  3280  3280 D LauncherStateManager: 	at com.android.quickstep.util.WorkspaceRevealAnim.<init>(go/retraceme fd9d0758bf4aa128afc6a457553abab416b2d3b5243d17c5825077f97151f69b:10)
+10-18 13:03:45.526  3280  3280 D LauncherStateManager: 	at com.android.launcher3.QuickstepTransitionManager.createWallpaperOpenAnimations(go/retraceme fd9d0758bf4aa128afc6a457553abab416b2d3b5243d17c5825077f97151f69b:842)
+10-18 13:03:45.526  3280  3280 D AllAppsTransitionController: shouldProtectHeader: false skipScrim: true state: Normal stateManager.getState(): Normal
+10-18 13:03:45.526  3280  3280 D KeyboardInsetsHandler: removePendingImeController: pendingImeController=null
+10-18 13:03:45.534  3280  3280 D b/311077782: LauncherAnimationRunner.setAnimation
+10-18 13:03:45.534  3280  3280 V BaseDepthController: Applying blur: 0 to Surface(name=VRI-com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#1150)/@0xb1c0a70 applyImmediately: false
+10-18 13:03:45.534  3280  3280 D BaseDepthController: shouldBlurWorkspace: false targetState: Normal currentStableState: Normal mCurrentBlur: 0 mLauncher.getDepthBlurTargets(): [com.android.launcher3.Workspace{8bec1e9 V.ED..... ......ID 0,0-1080,2400 #7f0a0499 app:id/workspace}, com.android.launcher3.Hotseat{b83be6e V.ED..... ......ID 0,1905-1080,2400 #7f0a01f6 app:id/hotseat}]
+10-18 13:03:45.534  3280  3280 V BaseDepthController: Applying blur: 79 to Surface(name=VRI-com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#1150)/@0xb1c0a70 applyImmediately: false
+10-18 13:03:45.534  3280  3280 D BaseDepthController: shouldBlurWorkspace: false targetState: Normal currentStableState: Normal mCurrentBlur: 79 mLauncher.getDepthBlurTargets(): [com.android.launcher3.Workspace{8bec1e9 V.ED..... ......ID 0,0-1080,2400 #7f0a0499 app:id/workspace}, com.android.launcher3.Hotseat{b83be6e V.ED..... ......ID 0,1905-1080,2400 #7f0a01f6 app:id/hotseat}]
+10-18 13:03:45.534  3280  3280 D BaseActivity: Launcher flags updated: [state_started|state_resumed|state_deferred_resumed|state_user_active|state_transition_active]
+10-18 13:03:45.534  3280  3280 D LauncherStateManager: StateManager.onStateTransitionStart: state: Normal
+10-18 13:03:45.538  3280  3280 D ConnectorStatusChecker: Connector disabled by search config flag.
+10-18 13:03:45.538  3280  3280 V BaseDepthController: Applying blur: 79 to Surface(name=VRI-com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#1150)/@0xb1c0a70 applyImmediately: false
+10-18 13:03:45.538  3280  3280 D BaseDepthController: shouldBlurWorkspace: false targetState: Normal currentStableState: Normal mCurrentBlur: 79 mLauncher.getDepthBlurTargets(): [com.android.launcher3.Workspace{8bec1e9 V.ED..... ......ID 0,0-1080,2400 #7f0a0499 app:id/workspace}, com.android.launcher3.Hotseat{b83be6e V.ED..... ......ID 0,1905-1080,2400 #7f0a01f6 app:id/hotseat}]
+10-18 13:03:45.538  3280  3280 V BaseDepthController: Applying blur: 79 to Surface(name=VRI-com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#1150)/@0xb1c0a70 applyImmediately: false
+10-18 13:03:45.538  3280  3280 D BaseDepthController: shouldBlurWorkspace: false targetState: Normal currentStableState: Normal mCurrentBlur: 79 mLauncher.getDepthBlurTargets(): [com.android.launcher3.Workspace{8bec1e9 V.ED..... ......ID 0,0-1080,2400 #7f0a0499 app:id/workspace}, com.android.launcher3.Hotseat{b83be6e V.ED..... ......ID 0,1905-1080,2400 #7f0a01f6 app:id/hotseat}]
+10-18 13:03:45.538  3280  3280 V BaseDepthController: Applying blur: 79 to Surface(name=VRI-com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#1150)/@0xb1c0a70 applyImmediately: false
+10-18 13:03:45.538  3280  3280 D BaseDepthController: shouldBlurWorkspace: false targetState: Normal currentStableState: Normal mCurrentBlur: 79 mLauncher.getDepthBlurTargets(): [com.android.launcher3.Workspace{8bec1e9 V.ED..... ......ID 0,0-1080,2400 #7f0a0499 app:id/workspace}, com.android.launcher3.Hotseat{b83be6e V.ED..... ......ID 0,1905-1080,2400 #7f0a01f6 app:id/hotseat}]
+10-18 13:03:45.542   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.542   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.542   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.562  3280  3280 D BaseActivity: Launcher flags updated: [state_started|state_resumed|state_deferred_resumed|state_window_focused|state_user_active|state_transition_active] +[state_window_focused]
+10-18 13:03:45.566  3280  3280 D ExtendedEditText: onWindowFocusChanged: hasWindowFocus=true
+10-18 13:03:45.573   806  1701 I ImeTracker: com.google.android.apps.nexuslauncher:65278dee: onRequestHide at ORIGIN_SERVER reason HIDE_SAME_WINDOW_FOCUSED_WITHOUT_EDITOR fromUser false userId 0 displayId 0
+10-18 13:03:45.566  3280  3280 V BaseDepthController: Applying blur: 79 to Surface(name=VRI-com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#1150)/@0xb1c0a70 applyImmediately: false
+10-18 13:03:45.566  3280  3280 D BaseDepthController: shouldBlurWorkspace: false targetState: Normal currentStableState: Normal mCurrentBlur: 79 mLauncher.getDepthBlurTargets(): [com.android.launcher3.Workspace{8bec1e9 V.ED..... ........ 0,0-1080,2400 #7f0a0499 app:id/workspace}, com.android.launcher3.Hotseat{b83be6e V.ED..... .......D 0,1905-1080,2400 #7f0a01f6 app:id/hotseat}]
+10-18 13:03:45.582   806  1701 W InputChannel-JNI: Channel already disposed.
+10-18 13:03:45.583  4028  4028 I GoogleInputMethodService: GoogleInputMethodService.onFinishInput():2361 
+10-18 13:03:45.582  4028  5494 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatusInternal():119 repeatCheckTimes = 0, locked = false
+10-18 13:03:45.588  4028  4028 I GoogleInputMethodService: GoogleInputMethodService.onStartInput():1532 onStartInput(EditorInfo{EditorInfo{packageName=com.google.android.apps.nexuslauncher, inputType=0, inputTypeString=NULL, enableLearning=false, autoCorrection=false, autoComplete=false, imeOptions=0, privateImeOptions=null, actionName=UNSPECIFIED, actionLabel=null, initialSelStart=-1, initialSelEnd=-1, initialCapsMode=0, label=null, fieldId=0, fieldName=null, extras=null, hintText=null, hintLocales=[]}}, false)
+10-18 13:03:45.590  4028  4028 W LatinIMEBase: LatinIMEBase.updateInputViewCoverNavigation():321 Null input view, cannot update padding!
+10-18 13:03:45.594   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.607  4028  5501 I Module  : DeviceLockedStatusModuleProvider$Module.updateDeviceLockedStatusInternal():119 repeatCheckTimes = 1, locked = false
+10-18 13:03:45.617   806  1644 W PackageConfigPersister: App-specific configuration not found for packageName: com.google.android.apps.nexuslauncher and userId: 0
+10-18 13:03:45.622  3280  3357 D LauncherAmbientCueVM: recalculateStates: isRootAttached=false (isTestMode=false, hasActions=false, isAmbientCueEnabled=true, isNotDeactivated=true, isTaskFocused=false [focusedId=1, targetId=-1])
+10-18 13:03:45.622  3280  3280 V BaseDepthController: Applying blur: 79 to Surface(name=VRI-com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#1150)/@0xb1c0a70 applyImmediately: false
+10-18 13:03:45.622  3280  3280 D BaseDepthController: shouldBlurWorkspace: false targetState: Normal currentStableState: Normal mCurrentBlur: 79 mLauncher.getDepthBlurTargets(): [com.android.launcher3.Workspace{8bec1e9 V.ED..... ........ 0,0-1080,2400 #7f0a0499 app:id/workspace}, com.android.launcher3.Hotseat{b83be6e V.ED..... .......D 0,1905-1080,2400 #7f0a01f6 app:id/hotseat}]
+10-18 13:03:45.630   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.630   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.630   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.630   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.634   551   582 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.634   551   582 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.674   806  1644 W libbinder.Binder: Binder transaction to android.gui.IWindowInfosListener, function: onWindowInfosChanged, code: 1, took 18446744073709551615ms. Data bytes: 8176 Reply bytes: 0 Flags: 17
+10-18 13:03:45.698   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.700   551   582 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.701   551   582 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.724  3280  3280 D InsetsController: hide(ime())
+10-18 13:03:45.724  3280  3280 I ImeTracker: com.google.android.apps.nexuslauncher:65278dee: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+10-18 13:03:45.725  3280  3280 V BaseDepthController: Applying blur: 20 to Surface(name=VRI-com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#1150)/@0xb1c0a70 applyImmediately: false
+10-18 13:03:45.725  3280  3280 D BaseDepthController: setEarlyWakeup: true
+10-18 13:03:45.725  3280  3280 D BaseDepthController: shouldBlurWorkspace: false targetState: Normal currentStableState: Normal mCurrentBlur: 20 mLauncher.getDepthBlurTargets(): [com.android.launcher3.Workspace{8bec1e9 V.ED..... ........ 0,0-1080,2400 #7f0a0499 app:id/workspace}, com.android.launcher3.Hotseat{b83be6e V.ED..... ........ 0,1905-1080,2400 #7f0a01f6 app:id/hotseat}]
+10-18 13:03:45.722   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.722   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.722   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.722   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.729   551   582 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.729   551   582 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.774   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.774   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.774   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.774   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.777   551   582 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.777   551   582 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.805  3280  3280 V BaseDepthController: Applying blur: 6 to Surface(name=VRI-com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#1150)/@0xb1c0a70 applyImmediately: false
+10-18 13:03:45.805  3280  3280 D BaseDepthController: shouldBlurWorkspace: false targetState: Normal currentStableState: Normal mCurrentBlur: 6 mLauncher.getDepthBlurTargets(): [com.android.launcher3.Workspace{8bec1e9 V.ED..... ........ 0,0-1080,2400 #7f0a0499 app:id/workspace}, com.android.launcher3.Hotseat{b83be6e V.ED..... ........ 0,1905-1080,2400 #7f0a01f6 app:id/hotseat}]
+10-18 13:03:45.827   551   582 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.834   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.834   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.834   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.841   551   582 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.841   551   582 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.843  3280  3280 V BaseDepthController: Applying blur: 1 to Surface(name=VRI-com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#1150)/@0xb1c0a70 applyImmediately: false
+10-18 13:03:45.843  3280  3280 D BaseDepthController: shouldBlurWorkspace: false targetState: Normal currentStableState: Normal mCurrentBlur: 1 mLauncher.getDepthBlurTargets(): [com.android.launcher3.Workspace{8bec1e9 V.ED..... ........ 0,0-1080,2400 #7f0a0499 app:id/workspace}, com.android.launcher3.Hotseat{b83be6e V.ED..... ........ 0,1905-1080,2400 #7f0a01f6 app:id/hotseat}]
+10-18 13:03:45.882   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.882   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.882   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.885   551   582 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.885   551   582 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.895  3280  3280 V BaseDepthController: Applying blur: 0 to Surface(name=VRI-com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity#1150)/@0xb1c0a70 applyImmediately: false
+10-18 13:03:45.895  3280  3280 D BaseDepthController: setEarlyWakeup: false
+10-18 13:03:45.895  3280  3280 D BaseDepthController: shouldBlurWorkspace: false targetState: Normal currentStableState: Normal mCurrentBlur: 0 mLauncher.getDepthBlurTargets(): [com.android.launcher3.Workspace{8bec1e9 V.ED..... ........ 0,0-1080,2400 #7f0a0499 app:id/workspace}, com.android.launcher3.Hotseat{b83be6e V.ED..... ........ 0,1905-1080,2400 #7f0a01f6 app:id/hotseat}]
+10-18 13:03:45.895  3280  3280 D WorkspaceRevealAnim: onAnimationEnd: workspace alpha = 1.0
+10-18 13:03:45.895  3280  3280 D BaseActivity: Launcher flags updated: [state_started|state_resumed|state_deferred_resumed|state_window_focused|state_user_active] -[state_transition_active]
+10-18 13:03:45.895  3280  3280 D LauncherStateManager: StateManager.onStateTransitionEnd: state: Normal
+10-18 13:03:45.896  3280  3280 D RecentsView: reset - mEnableDrawingLiveTile: false, mRecentsAnimationController: null
+10-18 13:03:45.896  3280  3280 D ActivityAllAppsContainerView: rebindAdapters: force: false
+10-18 13:03:45.896  3280  3280 D ActivityAllAppsContainerView: rebindAdapters: Not needed.
+10-18 13:03:45.896  3280  3280 D ConnectorStatusChecker: Connector disabled by search config flag.
+10-18 13:03:45.896  3280  3280 D ConnectorStatusChecker: Connector disabled by search config flag.
+10-18 13:03:45.901 10380 11122 V WindowManagerShell: Received remote transition finished callback for (#124)
+10-18 13:03:45.914   575   575 I adbd    : adbd service requested 'shell,v2,TERM=xterm,raw:am start -S -n com.example.photoviewer/.MainActivity'
+10-18 13:03:45.929 10380 10397 V WindowManagerShell: Transition animation finished (aborted=false), notifying core (#124) android.os.BinderProxy@2707f4c@0
+10-18 13:03:45.938   806   859 V WindowManager: Finish Transition (#124): created at 10-18 13:03:45.343 collect-started=0.036ms request-sent=0.093ms started=28.226ms ready=93.449ms sent=151.37ms commit=31.435ms finished=593.516ms
+10-18 13:03:45.938   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.938   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.938   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.946   551   582 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.946   551   582 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.949 10380 10397 V WindowManagerShell: Track 0 became idle
+10-18 13:03:45.953 10380 10397 V WindowManagerShell: All active transition animations finished
+10-18 13:03:45.954  3280  3280 D RecentsView: onTaskRemoved: 59, not handling task stack changes
+10-18 13:03:45.954  3280  3280 D TopTaskTracker: onTaskRemoved: 59
+10-18 13:03:45.954  3280  3280 D RecentsView: onTaskRemoved: 59, not handling task stack changes
+10-18 13:03:45.989   806  2871 I ActivityManager: Force stopping com.example.photoviewer appid=10230 user=0: from pid 5508
+10-18 13:03:45.990   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.990   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.990   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:45.990   551   551 E BpTransactionCompletedListener: Failed to transact (-32)
+10-18 13:03:46.001   551   582 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.026  3026  3026 D CarrierSvcBindHelper: onHandleForceStop: [com.example.photoviewer]
+10-18 13:03:46.026  3026  3026 D CarrierSvcBindHelper: No carrier app for: 0
+10-18 13:03:46.031  3280  3280 W FrameTracker: Missed App frame:jankTypeLegacy: UNKNOWN: 3, jankType: UNKNOWN: 3, vsyncId: 92485, totalDuration: 143948035, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME_FALLBACK>
+10-18 13:03:46.031  3280  3280 W FrameTracker: Missed SF frame:jankTypeLegacy: UNKNOWN: 3, jankType: UNKNOWN: 3, vsyncId: 92485, totalDuration: 143948035, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME_FALLBACK>
+10-18 13:03:46.031  3280  3280 W FrameTracker: Missed App frame:jankTypeLegacy: UNKNOWN: 3, jankType: JANK_APPLICATION, vsyncId: 92507, totalDuration: 201782231, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME_FALLBACK>
+10-18 13:03:46.031  3280  3280 W FrameTracker: Missed SF frame:jankTypeLegacy: UNKNOWN: 3, jankType: JANK_APPLICATION, vsyncId: 92507, totalDuration: 201782231, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME_FALLBACK>
+10-18 13:03:46.031  3280  3280 W FrameTracker: Missed App frame:jankTypeLegacy: UNKNOWN: 3, jankType: UNKNOWN: 3, vsyncId: 92543, totalDuration: 185037293, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME_FALLBACK>
+10-18 13:03:46.031  3280  3280 W FrameTracker: Missed SF frame:jankTypeLegacy: UNKNOWN: 3, jankType: UNKNOWN: 3, vsyncId: 92543, totalDuration: 185037293, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME_FALLBACK>
+10-18 13:03:46.031  3280  3280 W FrameTracker: Missed App frame:jankTypeLegacy: UNKNOWN: 3, jankType: JANK_APPLICATION, vsyncId: 92602, totalDuration: 93115574, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME_FALLBACK>
+10-18 13:03:46.031  3280  3280 W FrameTracker: Missed SF frame:jankTypeLegacy: UNKNOWN: 3, jankType: JANK_APPLICATION, vsyncId: 92602, totalDuration: 93115574, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME_FALLBACK>
+10-18 13:03:46.031  3280  3280 W FrameTracker: Missed App frame:jankTypeLegacy: UNKNOWN: 3, jankType: UNKNOWN: 3, vsyncId: 92617, totalDuration: 99115577, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME_FALLBACK>
+10-18 13:03:46.031  3280  3280 W FrameTracker: Missed SF frame:jankTypeLegacy: UNKNOWN: 3, jankType: UNKNOWN: 3, vsyncId: 92617, totalDuration: 99115577, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME_FALLBACK>
+10-18 13:03:46.031  3280  3280 W FrameTracker: Missed App frame:jankTypeLegacy: UNKNOWN: 3, jankType: UNKNOWN: 3, vsyncId: 92632, totalDuration: 94030293, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME_FALLBACK>
+10-18 13:03:46.031  3280  3280 W FrameTracker: Missed SF frame:jankTypeLegacy: UNKNOWN: 3, jankType: UNKNOWN: 3, vsyncId: 92632, totalDuration: 94030293, CUJ=J<LAUNCHER_APP_CLOSE_TO_HOME_FALLBACK>
+10-18 13:03:46.034   806  2592 I AppWidgetServiceImpl: Received broadcast: android.intent.action.PACKAGE_RESTARTED on user 0
+10-18 13:03:46.034   806  2592 I AppWidgetServiceImpl: Updating package stopped masked state for uid 10230 package com.example.photoviewer isStopped true
+10-18 13:03:46.092   551   582 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.249   806  2871 W ActivityTaskManager: callingPackage for (uid=2000, pid=5508) has no WPC
+10-18 13:03:46.254   806  2871 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10230, packageName = null, attributionTag = null, token = android.os.Binder@370701f, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+10-18 13:03:46.258   806  4033 W libbinder.ServiceManagerCppClient: Waited one second for android.hardware.uwb.IUwb/default (is service started? Number of threads started in the threadpool: 32. Are binder threads started and available?)
+10-18 13:03:46.275   806  2871 D CorePackageUpdate: onRecentTaskRemoved Removing task: 59
+10-18 13:03:46.207     0     0 I servicemanager: Caller(pid=806,uid=1000,sid=u:r:system_server:s0) Since 'android.hardware.uwb.IUwb/default' could not be found trying to start it as a lazy AIDL service. (if it's not configured to be a lazy service, it may be stuck starting or still starting).
+10-18 13:03:46.276   806  2871 D CorePackageUpdate: Couldn't find a persistent state for task= 59
+10-18 13:03:46.220     0     0 E init    : sys_prop: recv data is not properly obtained.
+10-18 13:03:46.221     0     0 E init    : sys_prop(PROP_MSG_SETPROP2): error while reading name/value from the socket: No such file or directory
+10-18 13:03:46.238     0     0 I servicemanager: Caller(pid=806,uid=1000,sid=u:r:system_server:s0) Tried to start aidl service android.hardware.uwb.IUwb/default as a lazy service, but was unable to. Usually this happens when a service is not installed, but if the service is intended to be used as a lazy service, then it may be configured incorrectly.
+10-18 13:03:46.278   318  5512 W libc    : Unable to set property "ctl.interface_start" to "aidl/android.hardware.uwb.IUwb/default": PROP_ERROR_READ_DATA (0x8)
+10-18 13:03:46.277  3280  3280 D RecentsView: onTaskDisplayChanged: 60, new displayId = 0
+10-18 13:03:46.278  3280  3280 D TopTaskTracker: handleTaskMovedToFront: TaskInfo{userId=0 taskId=60 effectiveUid=10230 seqId=0 displayId=0 isRunning=true baseIntent=Intent { flg=0x10000000 cmp=com.example.photoviewer/.MainActivity } baseActivity=ComponentInfo{com.example.photoviewer/com.example.photoviewer.MainActivity} topActivity=ComponentInfo{com.example.photoviewer/com.example.photoviewer.MainActivity} origActivity=null realActivity=ComponentInfo{com.example.photoviewer/com.example.photoviewer.MainActivity} realActivityIsAppLockEnabled=false numActivities=1 lastActiveTime=6385960 supportsMultiWindow=true supportsMultiWindowWithoutConstraints=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{android.os.BinderProxy@575ce84} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 128 - 0, 0) topActivityInfo=ActivityInfo{62d566d com.example.photoviewer.MainActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isInteractive=false isVisible=false isVisibleRequested=false isTopActivityNoDisplay=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false isActivityStackTransparent=false lastNonFullscreenBounds=null leafTaskBoundsFromOptions= false capturedLink=null capturedLinkTimestamp=0 requestedVisibleTypes=503 topActivityRequestOpenInBrowserEducationTimestamp=0 appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false isLeafTask= true eligibleForLetterboxEducation= false isLetterboxEducationEnabled= true isLetterboxDoubleTapEnabled= false eligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 topActivityAppBounds=Rect(0, 0 - 1080, 2400) isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false hasMinAspectRatioOverride=false topActivityLetterboxBounds=null topNonResizableActivityAspectRatio=-1.0 idealTaskOrientation=-1} topActivityMainWindowFrame=null}
+10-18 13:03:46.274   806  2871 V ActivityTaskManager: TaskLaunchParamsModifier: phase=2 task=Task{4e74e97 #60 type=standard A=10230:com.example.photoviewer} activity=ActivityRecord{234702102 u0 com.example.photoviewer/.MainActivity t-1} display-from-task=0 display-id=0 task-display-area-windowing-mode=1 suggested-display-area=DefaultTaskDisplayArea@26022570 inherit-from-task=fullscreen non-freeform-task-display-area display-area=DefaultTaskDisplayArea@26022570 skip-bounds-fullscreen
+10-18 13:03:46.274   806  2871 I ActivityTaskManager: START u0 {flg=0x10000000 xflg=0x5 cmp=com.example.photoviewer/.MainActivity} with LAUNCH_MULTIPLE from uid 2000 (com.android.shell) (BAL_ALLOW_SHELL_UID) result code=0
+10-18 13:03:46.282  3280  3280 D BaseActivity: Launcher flags updated: [state_started|state_resumed|state_deferred_resumed|state_window_focused|state_user_active] -[]
+10-18 13:03:46.278   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.278   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.294   551   572 I libbinder.BpBinder: onLastStrongRef automatically unlinking death recipients for binder (0x7fdad1ed95a0) with descriptor: '(not cached)'
+10-18 13:03:46.294  3280  3280 D BaseActivity: Launcher flags updated: [state_started|state_resumed|state_deferred_resumed|state_window_focused] -[state_user_active]
+10-18 13:03:46.294  3280  3280 D BaseActivity: Launcher flags updated: [state_started|state_window_focused] -[state_resumed|state_deferred_resumed]
+10-18 13:03:46.294  3280  3280 W SplitSelectStateCtor: Missing session instanceIds
+10-18 13:03:46.294  3280  3280 D StatsLog: LAUNCHER_SPLIT_SELECTION_EXIT_INTERRUPTED
+10-18 13:03:46.295   806   863 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 10230, packageName = null, attributionTag = null, token = android.os.Binder@370701f, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+10-18 13:03:46.300   806  1644 D DifferentDisplayCheck: Focus lost for Task Task{e39e561 #7 type=home I=com.google.android.apps.nexuslauncher/.NexusLauncherActivity} on display 0
+10-18 13:03:46.300   806  1644 D DifferentDisplayCheck: Focus gained for Task Task{4e74e97 #60 type=standard A=10230:com.example.photoviewer} on display 0
+10-18 13:03:46.294 10380 10397 D WindowManagerShell: setLauncherKeepClearAreaHeight: visible=false, height=495
+10-18 13:03:46.306 10380 10397 V WindowManagerShell: Transition requested (#125): android.os.BinderProxy@46f6a6f TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=60 effectiveUid=10230 seqId=0 displayId=0 isRunning=true baseIntent=Intent { flg=0x10000000 cmp=com.example.photoviewer/.MainActivity } baseActivity=ComponentInfo{com.example.photoviewer/com.example.photoviewer.MainActivity} topActivity=ComponentInfo{com.example.photoviewer/com.example.photoviewer.MainActivity} origActivity=null realActivity=ComponentInfo{com.example.photoviewer/com.example.photoviewer.MainActivity} realActivityIsAppLockEnabled=false numActivities=1 lastActiveTime=6385979 supportsMultiWindow=true supportsMultiWindowWithoutConstraints=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{android.os.BinderProxy@6b8537c} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 128 - 0, 0) topActivityInfo=ActivityInfo{3d38405 com.example.photoviewer.MainActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isInteractive=false isVisible=false isVisibleRequested=false isTopActivityNoDisplay=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false isActivityStackTransparent=false lastNonFullscreenBounds=null leafTaskBoundsFromOptions= false capturedLink=null capturedLinkTimestamp=0 requestedVisibleTypes=503 topActivityRequestOpenInBrowserEducationTimestamp=0 appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false isLeafTask= true eligibleForLetterboxEducation= false isLetterboxEducationEnabled= true isLetterboxDoubleTapEnabled= false eligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 topActivityAppBounds=Rect(0, 0 - 1080, 2400) isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false hasMinAspectRatioOverride=false topActivityLetterboxBounds=null topNonResizableActivityAspectRatio=-1.0 idealTaskOrientation=-1} topActivityMainWindowFrame=null}, pipChange = null, remoteTransitionInfo = null, displayChanges = null, requestedLocation = null, userChange = null, windowingLayerChange = null, fullscreenRequestChange = null, flags = 0, debugId = 125 }
+10-18 13:03:46.306 10380 10397 V ShellDesktopMode: skipping handleRequest reason=triggerTask's display doesn't support desktop mode
+10-18 13:03:46.306 10380 10397 D ShellSplitScreen: logExit: no-op, mLoggerSessionId is null
+10-18 13:03:46.314   806  1644 V WindowManager: Defer transition id=125 for TaskFragmentTransaction=android.os.Binder@52a841c organizer (pid=3280, uid=10189)
+10-18 13:03:46.315   806  2592 I AppWidgetServiceImpl: Received broadcast: android.intent.action.PACKAGE_UNSTOPPED on user 0
+10-18 13:03:46.315   806  2592 I AppWidgetServiceImpl: Updating package stopped masked state for uid 10230 package com.example.photoviewer isStopped false
+10-18 13:03:46.318  5398  5398 E libnfc_nci: Timeout waiting for NFC AIDL service (future).
+10-18 13:03:46.319  5398  5398 I libnfc_nci: NfcAdaptation::InitializeHalDeviceContext: Failed to retrieve the NFC AIDL!
+10-18 13:03:46.319  5398  5398 E libnfc_nci: Exit current process to recover.
+10-18 13:03:46.325 10380 10406 D SplashScreenView: Build android.window.SplashScreenView{311f403 V.E...... ......ID 0,0-0,0}
+10-18 13:03:46.325 10380 10406 D SplashScreenView: Icon: view: android.widget.ImageView{44fff80 V.ED..... ......I. 0,0-0,0 #1020596 android:id/splashscreen_icon_view} drawable: com.android.wm.shell.startingsurface.SplashscreenIconDrawableFactory$ImmobileIconDrawable@2e8f9b9 size: 420
+10-18 13:03:46.325 10380 10406 D SplashScreenView: Branding: view: android.view.View{75ee1fe G.ED..... ......I. 0,0-0,0 #1020595 android:id/splashscreen_branding_view} drawable: null size w: 0 h: 0
+10-18 13:03:46.326   491   491 D Zygote  : Forked child process 5515
+10-18 13:03:46.326 10380 10397 V RecentTasksController: Notify recent tasks changed: 1
+10-18 13:03:46.326 10380 10397 V RecentTasksController: onRecentTaskRemovedForAddTask; removing task=59
+10-18 13:03:46.326 10380 10397 D ShellDesktopMode: (0): Removes freeform task: taskId=59
+10-18 13:03:46.326 10380 10397 W ShellDesktopMode: (0): No display id found for task: taskId=59
+10-18 13:03:46.326 10380 10397 V RecentTasksController: Notify recent tasks changed: 1
+10-18 13:03:46.326   806  4371 W InputChannel-JNI: Channel already disposed.
+10-18 13:03:46.334   806   873 I ActivityManager: Start proc 5515:com.example.photoviewer/u0a230 for next-top-activity {com.example.photoviewer/com.example.photoviewer.MainActivity}
+10-18 13:03:46.330 10380 10397 V ShellTaskOrganizer: Task vanished taskId=59
+10-18 13:03:46.330 10380 10397 V ShellTaskOrganizer: Fullscreen Task Vanished: #59
+10-18 13:03:46.330 10380 10397 V ShellDesktopMode: Task Vanished: #59 closed=true
+10-18 13:03:46.330 10380 10397 D ShellPackageUpdate: PackageUpdateController: Removing handlePackageUpdate for task: 59
+10-18 13:03:46.337   806  2871 E WindowOrganizerController: Attempting to externally change a non-organized container: Task{c52921d #59 type=standard A=10230:com.example.photoviewer}={handlePackageUpdate:false,} playercount=2 taskorg=android.window.ITaskOrganizer$Stub$Proxy@b0a41a
+10-18 13:03:46.334   806  4371 D WindowManager: setClientSurface Surface(name=VRI-Splash Screen com.example.photoviewer#1160)/@0x19ad923 for d93ab4 Splash Screen com.example.photoviewer
+10-18 13:03:46.341  3280  3280 D RecentTasksList: invalidateLoadedTasks - previous requestLoadId: -1
+10-18 13:03:46.338  5515  5515 I libprocessgroup: Created cgroup /sys/fs/cgroup/apps/uid_10230/pid_5515
+10-18 13:03:46.342   806  2811 I ActivityManager: Process com.google.android.nfc (pid 5398) has died: pers PER 
+10-18 13:03:46.345   806  2871 V WindowManager: Continue transition id=125 for TaskFragmentTransaction=android.os.Binder@52a841c
+10-18 13:03:46.346 10380 10405 I Surface : Creating surface for consumer unnamed-10380-45 with slotExpansion=1 for 64 slots
+10-18 13:03:46.342   806  2811 W ActivityManager: Re-adding persistent process ProcessRecord{eb12b8a 5398:com.google.android.nfc/1027}
+10-18 13:03:46.342   806  2811 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 1027, packageName = null, attributionTag = null, token = android.os.Binder@370701f, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+10-18 13:03:46.346  3280  3280 D RecentTasksList: invalidateLoadedTasks - previous requestLoadId: -1
+10-18 13:03:46.342   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.342   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.342   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.348 10380 10397 V RecentTasksController: Notify recent tasks changed: 1
+10-18 13:03:46.349 10380 10397 D ShellDesktopMode: Task 59 is vanishing. Removing task data from repository
+10-18 13:03:46.349 10380 10397 V AppCompat: []
+10-18 13:03:46.349 10380 10397 V AppCompat: []
+10-18 13:03:46.349 10380 10397 V AppCompat: []
+10-18 13:03:46.349 10380 10397 V AppCompat: {}
+10-18 13:03:46.305     0     0 I binder  : undelivered transaction 1263181, process died.
+10-18 13:03:46.352  3280  3280 D RecentTasksList: invalidateLoadedTasks - previous requestLoadId: -1
+10-18 13:03:46.346   806   874 I libprocessgroup: Removed cgroup /sys/fs/cgroup/system/uid_1027/pid_5398
+10-18 13:03:46.350   491   491 I Zygote  : Process 5398 exited cleanly (0)
+10-18 13:03:46.360  5515  5515 I Zygote  : Process 5515 created for com.example.photoviewer
+10-18 13:03:46.361 10380 10405 I Surface : Creating surface for consumer VRI[photoviewer]#36(BLAST Consumer)36 with slotExpansion=1 for 64 slots
+10-18 13:03:46.361  5515  5515 I ple.photoviewer: Late-enabling -Xcheck:jni
+10-18 13:03:46.366   491   491 D Zygote  : Forked child process 5516
+10-18 13:03:46.366  5516  5516 I libprocessgroup: Created cgroup /sys/fs/cgroup/system/uid_1027/pid_5516
+10-18 13:03:46.372   806   873 I ActivityManager: Start proc 5516:com.google.android.nfc/1027 for restart com.google.android.nfc
+10-18 13:03:46.366   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.366   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.366   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.390   806  3112 W libbinder.Binder: Binder transaction to android.gui.IWindowInfosListener, function: onWindowInfosChanged, code: 1, took 18446744073709551613ms. Data bytes: 8176 Reply bytes: 0 Flags: 17
+10-18 13:03:46.410   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.426 10380 10397 V RecentTasksController: generateList(getRecentTasks)
+10-18 13:03:46.426 10380 10397 V RecentTasksController: initializeDesksMap - allDeskIds: []
+10-18 13:03:46.426 10380 10397 V RecentTasksController: Task 60 is not an active desktop task
+10-18 13:03:46.426 10380 10397 V RecentTasksController: Added fullscreen task: 60
+10-18 13:03:46.426 10380 10397 V RecentTasksController: generateList - complete
+10-18 13:03:46.426 10380 10397 V RecentTasksController: Notify recent tasks changed: 1
+10-18 13:03:46.436  3280  3280 D RecentTasksList: invalidateLoadedTasks - previous requestLoadId: -1
+10-18 13:03:46.443  5516  5516 I Zygote  : Process 5516 created for com.google.android.nfc
+10-18 13:03:46.444  5516  5516 I gle.android.nfc: Using generational CollectorTypeCMC GC.
+10-18 13:03:46.445  5516  5516 W gle.android.nfc: Unexpected CPU variant for x86: x86_64.
+10-18 13:03:46.445  5516  5516 W gle.android.nfc: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, alderlake, pantherlake, default
+10-18 13:03:46.449  3280  3358 D PreloadThumbnailUseCase: Preloading thumbnails for task ids: [[id=60 windowingMode=1 user=0 lastActiveTime=6385979 lastFocusedTime=0] null]
+10-18 13:03:46.450   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.462  5515  5515 I ple.photoviewer: Using generational CollectorTypeCMC GC.
+10-18 13:03:46.463  5515  5515 W ple.photoviewer: Unexpected CPU variant for x86: x86_64.
+10-18 13:03:46.463  5515  5515 W ple.photoviewer: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, alderlake, pantherlake, default
+10-18 13:03:46.469  5516  5516 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+10-18 13:03:46.472 10380 10540 V WindowManagerShell: onTransitionReady(transaction=3461743646894)
+10-18 13:03:46.478 10380 10397 V WindowManagerShell: onTransitionReady (#125) android.os.BinderProxy@46f6a6f: {id=125 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[
+10-18 13:03:46.478 10380 10397 V WindowManagerShell:         {m=OPEN f=MOVE_TO_TOP|FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=60#1157)/@0x32248b0 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0 taskParent=-1 winMode=1 userId=0},
+10-18 13:03:46.478 10380 10397 V WindowManagerShell:         {m=TO_BACK f=SHOW_WALLPAPER|FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=1#485)/@0xfdec329 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0 taskParent=-1 winMode=1 userId=0},
+10-18 13:03:46.478 10380 10397 V WindowManagerShell:         {m=TO_BACK f=IS_WALLPAPER leash=Surface(name=WallpaperWindowToken{a99246f}#55)/@0xc05c6ae sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0}
+10-18 13:03:46.478 10380 10397 V WindowManagerShell:     ]}
+10-18 13:03:46.478 10380 10397 V WindowManagerShell: FocusTransitionObserver: Updating focus state for transition #125
+10-18 13:03:46.478 10380 10397 D WindowManagerShell: FocusTransitionObserver: Focus updated on displayId=0 to taskId=60
+10-18 13:03:46.478 10380 10397 V WindowManagerShell: FocusTransitionObserver: Notifying local listeners of task focus change: taskId=60, isFocusedOnDisplay=true, isFocusedGlobally=true
+10-18 13:03:46.478 10380 10397 V RecentTasksController: Notify recent tasks changed: 2
+10-18 13:03:46.478 10380 10397 V WindowManagerShell: FocusTransitionObserver: Notifying local listeners of task focus change: taskId=1, isFocusedOnDisplay=false, isFocusedGlobally=false
+10-18 13:03:46.478 10380 10397 V WindowManagerShell: Playing animation for (#125) android.os.BinderProxy@46f6a6f@0
+10-18 13:03:46.483   806   859 V WindowManager: Sent Transition (#125) createdAt=10-18 13:03:46.256 via request=TransitionRequestInfo { type = OPEN, triggerTask = TaskInfo{userId=0 taskId=60 effectiveUid=10230 seqId=0 displayId=0 isRunning=true baseIntent=Intent { flg=0x10000000 cmp=com.example.photoviewer/.MainActivity } baseActivity=ComponentInfo{com.example.photoviewer/com.example.photoviewer.MainActivity} topActivity=ComponentInfo{com.example.photoviewer/com.example.photoviewer.MainActivity} origActivity=null realActivity=ComponentInfo{com.example.photoviewer/com.example.photoviewer.MainActivity} realActivityIsAppLockEnabled=false numActivities=1 lastActiveTime=6385979 supportsMultiWindow=true supportsMultiWindowWithoutConstraints=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{RemoteToken{58f9aa Task{4e74e97 #60 type=standard A=10230:com.example.photoviewer}}} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 128 - 0, 0) topActivityInfo=ActivityInfo{570499b com.example.photoviewer.MainActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=false isInteractive=false isVisible=false isVisibleRequested=false isTopActivityNoDisplay=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false isActivityStackTransparent=false lastNonFullscreenBounds=null leafTaskBoundsFromOptions= false capturedLink=null capturedLinkTimestamp=0 requestedVisibleTypes=503 topActivityRequestOpenInBrowserEducationTimestamp=0 appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false isLeafTask= true eligibleForLetterboxEducation= false isLetterboxEducationEnabled= true isLetterboxDoubleTapEnabled= false eligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 topActivityAppBounds=Rect(0, 0 - 1080, 2400) isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false hasMinAspectRatioOverride=false topActivityLetterboxBounds=null topNonResizableActivityAspectRatio=-1.0 idealTaskOrientation=-1} topActivityMainWindowFrame=null}, pipChange = null, remoteTransitionInfo = null, displayChanges = null, requestedLocation = null, userChange = null, windowingLayerChange = null, fullscreenRequestChange = null, flags = 0, debugId = 125 }
+10-18 13:03:46.478 10380 10397 D ShellSplitScreen: startAnimation: transition=125 isSplitActive=false
+10-18 13:03:46.483   806   859 V WindowManager:     startWCT=WindowContainerTransaction { changes= {} hops= [] flags= 0 errorCallbackToken=null taskFragmentOrganizer=null }
+10-18 13:03:46.478 10380 10397 V ShellRecents: RecentsTransitionHandler.startAnimation: no controller found
+10-18 13:03:46.478 10380 10397 V ShellDesktopMode: No pending desktop transition
+10-18 13:03:46.478 10380 10397 V ShellDesktopMode: DesktopHomeScreenPeekTransitionHandler: startAnimation
+10-18 13:03:46.483   806   859 V WindowManager:     info={id=125 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[
+10-18 13:03:46.483   806   859 V WindowManager:         {WCT{RemoteToken{58f9aa Task{4e74e97 #60 type=standard A=10230:com.example.photoviewer}}} m=OPEN f=MOVE_TO_TOP|FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=60#1157)/@0x1294e20 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0 taskParent=-1 winMode=1 userId=0},
+10-18 13:03:46.483   806   859 V WindowManager:         {WCT{RemoteToken{c5d7749 Task{a08b058 #1 type=home}}} m=TO_BACK f=SHOW_WALLPAPER|FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=1#485)/@0x226632f sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0 taskParent=-1 winMode=1 userId=0},
+10-18 13:03:46.483   806   859 V WindowManager:         {m=TO_BACK f=IS_WALLPAPER leash=Surface(name=WallpaperWindowToken{a99246f}#55)/@0x826efa7 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0}
+10-18 13:03:46.483   806   859 V WindowManager:     ]}
+10-18 13:03:46.478 10380 10397 V WindowManagerShell: Transition doesn't have explicit remote, search filters for match for {id=125 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[{m=OPEN f=MOVE_TO_TOP|FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=60#1157)/@0x32248b0 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0 taskParent=-1 winMode=1 userId=0},{m=TO_BACK f=SHOW_WALLPAPER|FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=1#485)/@0xfdec329 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0 taskParent=-1 winMode=1 userId=0},{m=TO_BACK f=IS_WALLPAPER leash=Surface(name=WallpaperWindowToken{a99246f}#55)/@0xc05c6ae sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0}]}
+10-18 13:03:46.478 10380 10397 V WindowManagerShell:  Checking filter Pair{{types=[OPEN,TO_FRONT] flags=0x0 notFlags=0x0 checks=[{atype=standard independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=true order=ANY topActivity=null launchCookie=null windowingMode=freeform isCrossDisplayMove=false}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@3b946aa, appThread = null, debugName = DesktopWindowLimitUnminimize, filter = {types=[OPEN,TO_FRONT] flags=0x0 notFlags=0x0 checks=[{atype=standard independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=true order=ANY topActivity=null launchCookie=null windowingMode=freeform isCrossDisplayMove=false}]} }}
+10-18 13:03:46.478 10380 10397 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0 notFlags=0x0 checks=[{atype=undefined independent=true modes=[CLOSE,TO_BACK] flags=IN_TASK_WITH_EMBEDDED_ACTIVITY mustBeTask=false order=ANY topActivity=null launchCookie=null taskFragmentToken=android.os.BinderProxy@ae7129b windowingMode=undefined isCrossDisplayMove=false}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@af05638, appThread = android.app.IApplicationThread$Stub$Proxy@9e9f611, debugName = overlayBackTransition, filter = {types=[] flags=0x0 notFlags=0x0 checks=[{atype=undefined independent=true modes=[CLOSE,TO_BACK] flags=IN_TASK_WITH_EMBEDDED_ACTIVITY mustBeTask=false order=ANY topActivity=null launchCookie=null taskFragmentToken=android.os.BinderProxy@ae7129b windowingMode=undefined isCrossDisplayMove=false}]} }}
+10-18 13:03:46.478 10380 10397 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0 notFlags=0x0 checks=[{atype=dream independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{atype=home independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=false}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@3bd2376, appThread = android.app.IApplicationThread$Stub$Proxy@b9a3d77, debugName = LauncherToDream, filter = {types=[] flags=0x0 notFlags=0x0 checks=[{atype=dream independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{atype=home independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=false}]} }}
+10-18 13:03:46.478 10380 10397 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0 notFlags=0x0 checks=[{atype=standard independent=false modes=[CHANGE] flags=NONE mustBeTask=true order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=true}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@709de4, appThread = android.app.IApplicationThread$Stub$Proxy@266e24d, debugName = QuickstepDisplayMove, filter = {types=[] flags=0x0 notFlags=0x0 checks=[{atype=standard independent=false modes=[CHANGE] flags=NONE mustBeTask=true order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=true}]} }}
+10-18 13:03:46.478 10380 10397 V WindowManagerShell:  Checking filter Pair{{types=[] flags=0x0 notFlags=0x100 checks=[{atype=home independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{atype=standard independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{NOT atype=undefined independent=true modes=[] flags=NONE mustBeTask=true order=ANY topActivity=null launchCookie=null customAnim=true windowingMode=undefined isCrossDisplayMove=false}]} RemoteTransition { remoteTransition = android.window.IRemoteTransition$Stub$Proxy@3500102, appThread = android.app.IApplicationThread$Stub$Proxy@2eb3a13, debugName = QuickstepLaunchHome, filter = {types=[] flags=0x0 notFlags=0x100 checks=[{atype=home independent=true modes=[OPEN,TO_FRONT] flags=NONE mustBeTask=false order=ANY topActivity=ComponentInfo{com.google.android.apps.nexuslauncher/com.google.android.apps.nexuslauncher.NexusLauncherActivity} launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{atype=standard independent=true modes=[CLOSE,TO_BACK] flags=NONE mustBeTask=false order=ANY topActivity=null launchCookie=null windowingMode=undefined isCrossDisplayMove=false},{NOT atype=undefined independent=true modes=[] flags=NONE mustBeTask=true order=ANY topActivity=null launchCookie=null customAnim=true windowingMode=undefined isCrossDisplayMove=false}]} }}
+10-18 13:03:46.478 10380 10397 V WindowManagerShell:  Delegate animation for (#125) to null
+10-18 13:03:46.478 10380 10397 V WindowManagerShell: start default transition animation, info = {id=125 t=OPEN f=0x0 trk=0 r=[0@Point(0, 0)] c=[{m=OPEN f=MOVE_TO_TOP|FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=60#1157)/@0x32248b0 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0 taskParent=-1 winMode=1 userId=0},{m=TO_BACK f=SHOW_WALLPAPER|FLAG_CHANGED_INTERACTIVE leash=Surface(name=Task=1#485)/@0xfdec329 sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0 taskParent=-1 winMode=1 userId=0},{m=TO_BACK f=IS_WALLPAPER leash=Surface(name=WallpaperWindowToken{a99246f}#55)/@0xc05c6ae sb=Rect(0, 0 - 1080, 2400) eb=Rect(0, 0 - 1080, 2400) epz=Point(1080, 2400) d=0}]}
+10-18 13:03:46.478 10380 10397 V WindowManagerShell: loadAnimation: anim=android.view.animation.AnimationSet@7f768e5 animAttr=0x13 type=OPEN isEntrance=false
+10-18 13:03:46.482   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.482   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.482   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.507 10380 10397 V WindowManagerShell: loadAnimation: anim=android.view.animation.AnimationSet@859de6b animAttr=0x12 type=OPEN isEntrance=true
+10-18 13:03:46.509   575   616 I adbd    : jdwp connection from 5515
+10-18 13:03:46.518  3280  3280 D RecentTasksList: invalidateLoadedTasks - previous requestLoadId: -1
+10-18 13:03:46.519  3280  3280 D TopTaskTracker: handleTaskMovedToFront: TaskInfo{userId=0 taskId=60 effectiveUid=10230 seqId=0 displayId=0 isRunning=true baseIntent=Intent { flg=0x10000000 cmp=com.example.photoviewer/.MainActivity } baseActivity=ComponentInfo{com.example.photoviewer/com.example.photoviewer.MainActivity} topActivity=ComponentInfo{com.example.photoviewer/com.example.photoviewer.MainActivity} origActivity=null realActivity=ComponentInfo{com.example.photoviewer/com.example.photoviewer.MainActivity} realActivityIsAppLockEnabled=false numActivities=1 lastActiveTime=6385979 supportsMultiWindow=true supportsMultiWindowWithoutConstraints=true resizeMode=1 isResizeable=true minWidth=-1 minHeight=-1 defaultMinSize=220 token=WCT{android.os.BinderProxy@575ce84} topActivityType=1 pictureInPictureParams=null shouldDockBigOverlays=false launchIntoPipHostTaskId=-1 lastParentTaskIdBeforePip=-1 displayCutoutSafeInsets=Rect(0, 0 - 0, 0) topActivityInfo=ActivityInfo{d6c1b33 com.example.photoviewer.MainActivity} launchCookies=[] positionInParent=Point(0, 0) parentTaskId=-1 isFocused=true isInteractive=true isVisible=true isVisibleRequested=true isTopActivityNoDisplay=false isSleeping=false locusId=null displayAreaFeatureId=1 isTopActivityTransparent=false isActivityStackTransparent=false lastNonFullscreenBounds=null leafTaskBoundsFromOptions= false capturedLink=null capturedLinkTimestamp=0 requestedVisibleTypes=503 topActivityRequestOpenInBrowserEducationTimestamp=0 appCompatTaskInfo=AppCompatTaskInfo { topActivityInSizeCompat=false isLeafTask= true eligibleForLetterboxEducation= false isLetterboxEducationEnabled= true isLetterboxDoubleTapEnabled= false eligibleForUserAspectRatioButton= false topActivityBoundsLetterboxed= false isFromLetterboxDoubleTap= false topActivityLetterboxVerticalPosition= -1 topActivityLetterboxHorizontalPosition= -1 topActivityLetterboxWidth=-1 topActivityLetterboxHeight=-1 topActivityAppBounds=Rect(0, 0 - 1080, 2400) isUserFullscreenOverrideEnabled=false isSystemFullscreenOverrideEnabled=false hasMinAspectRatioOverride=false topActivityLetterboxBounds=null topNonResizableActivityAspectRatio=-1.0 idealTaskOrientation=-1} topActivityMainWindowFrame=null}
+10-18 13:03:46.510   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.525 10380 10397 V WindowManagerShell:  animated by com.android.wm.shell.transition.DefaultTransitionHandler@4207e44
+10-18 13:03:46.525 10380 10397 W Looper  : Slow dispatch took 47ms wmshell.main app=com.android.systemui main=false group=TOP_APP h=android.os.Handler c=com.android.wm.shell.transition.Transitions$TransitionPlayerImpl$$ExternalSyntheticLambda1@1ca7dc8 m=0
+10-18 13:03:46.525 10380 10397 V ShellTaskOrganizer: Task appeared taskId=60 listener=FullscreenTaskListener
+10-18 13:03:46.525 10380 10397 V ShellTaskOrganizer: Fullscreen Task Appeared: #60
+10-18 13:03:46.525 10380 10397 D ShellPackageUpdate: PackageUpdateController: Setting handlePackageUpdate for task: 60
+10-18 13:03:46.526   806  2811 E TransitionChain: Can't collect into a chain with no transition
+10-18 13:03:46.526 10380 10397 V RecentTasksController: Notify recent tasks changed: 1
+10-18 13:03:46.534   551  1042 W libbinder.Binder: Binder transaction to android.gui.IDisplayEventConnection, function: requestNextVsync, code: 3, took 18446744073709551611ms. Data bytes: 88 Reply bytes: 0 Flags: 17
+10-18 13:03:46.543  5515  5515 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+10-18 13:03:46.549  3280  3280 D RecentTasksList: invalidateLoadedTasks - previous requestLoadId: -1
+10-18 13:03:46.550   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.550   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.550   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.550   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.550   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.569   551   582 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.589  5516  5516 D CompatChangeReporter: Compat change id reported: 333566037; UID 1027; state: ENABLED
+10-18 13:03:46.596  5516  5516 D nativeloader: Configuring clns-shared-9 for other apk /apex/com.android.nfcservices/priv-app/NfcNciApexGoogle@CP41.260828.004.A7/NfcNciApexGoogle.apk. target_sdk_version=37, uses_libraries=, library_path=/apex/com.android.nfcservices/priv-app/NfcNciApexGoogle@CP41.260828.004.A7/lib/x86_64:/system/lib64:/system_ext/lib64, permitted_path=/data:/mnt/expand:/data/user_de/0/com.google.android.nfc:/apex/com.android.nfcservices/priv-app/NfcNciApexGoogle@CP41.260828.004.A7:/system/lib64:/system_ext/lib64
+10-18 13:03:46.598   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.598   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.598   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.598   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.598   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.611  5516  5516 D nativeloader: InitApexLibraries:
+10-18 13:03:46.611  5516  5516 D nativeloader:   com_android_adservices: libhpke_jni.so:libtflite_support_classifiers_native.so
+10-18 13:03:46.611  5516  5516 D nativeloader:   com_android_appsearch: libappsearchservice.so:libicing_anywhere.so
+10-18 13:03:46.611  5516  5516 D nativeloader:   com_android_art: libartservice.so
+10-18 13:03:46.611  5516  5516 D nativeloader:   com_android_bt: libbluetooth_jni.so
+10-18 13:03:46.611  5516  5516 D nativeloader:   com_android_conscrypt: libjavacrypto.so
+10-18 13:03:46.611  5516  5516 D nativeloader:   com_android_extservices: libtflite_support_classifiers_native.so
+10-18 13:03:46.611  5516  5516 D nativeloader:   com_android_mediaprovider: libpdfclient.so
+10-18 13:03:46.611  5516  5516 D nativeloader:   com_android_nfcservices: libnfc_nci_jni.so:libnfc_rust_jni.so
+10-18 13:03:46.611  5516  5516 D nativeloader:   com_android_npumanager: libnpumanager_service_jni.so
+10-18 13:03:46.611  5516  5516 D nativeloader:   com_android_ondevicepersonalization: libfcp_cpp_dep_jni.so:libfcp_hpke_jni.so
+10-18 13:03:46.611  5516  5516 D nativeloader:   com_android_os_statsd: libstats_jni.so
+10-18 13:03:46.611  5516  5516 D nativeloader:   com_android_profiling: libanomaly_detector_service_jni.so
+10-18 13:03:46.611  5516  5516 D nativeloader:   com_android_tethering: libandroid_net_connectivity_com_android_net_module_util_jni.so:libandroid_net_connectivity_com_android_net_module_util_jni_CommonConnectivityJni.so:libcrypto_httpengine.so:libframework-connectivity-jni.so:libframework-connectivity-tiramisu-jni.so:libhttpengine.so:libservice-connectivity.so:libservice
+10-18 13:03:46.626  5516  5516 D ActivityThread: Set OS env TMPDIR to /data/user_de/0/com.google.android.nfc/cache
+10-18 13:03:46.630  3280  3357 D LauncherAmbientCueVM: recalculateStates: isRootAttached=false (isTestMode=false, hasActions=false, isAmbientCueEnabled=true, isNotDeactivated=true, isTaskFocused=false [focusedId=60, targetId=-1])
+10-18 13:03:46.632  5516  5516 V GraphicsEnvironment: Currently set values for:
+10-18 13:03:46.632  5516  5516 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+10-18 13:03:46.632  5516  5516 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+10-18 13:03:46.632  5516  5516 V GraphicsEnvironment: com.google.android.nfc is not listed in per-application setting
+10-18 13:03:46.632  5516  5516 V GraphicsEnvironment: No special selections for ANGLE, returning default driver choice
+10-18 13:03:46.639  5516  5516 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+10-18 13:03:46.638   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.638   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.638   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.655  5516  5516 D CompatChangeReporter: Compat change id reported: 407952621; UID 1027; state: ENABLED
+10-18 13:03:46.656  5516  5516 D CompatChangeReporter: Compat change id reported: 419020719; UID 1027; state: ENABLED
+10-18 13:03:46.673  5515  5515 D CompatChangeReporter: Compat change id reported: 333566037; UID 10230; state: ENABLED
+10-18 13:03:46.674   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.674   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.674   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.674   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.685  5516  5516 I RegisteredComponentCache: generateComponentsList: New Components => 
+10-18 13:03:46.686  5516  5516 I RegisteredComponentCache: ComponentInfo: ResolveInfo{9a3f058 com.google.android.tag/com.android.apps.tag.TagViewer m=0x108000 userHandle=UserHandle{0}}, techs: android.nfc.tech.Ndef, 
+10-18 13:03:46.686  5516  5516 I RegisteredComponentCache: generateComponentsList: Removed Components => 
+10-18 13:03:46.688  5516  5546 D CompatChangeReporter: Compat change id reported: 458413887; UID 1027; state: ENABLED
+10-18 13:03:46.705  5516  5554 I NfcEventLog: readListFromLogFile: No NFC events found in log file
+10-18 13:03:46.714  5516  5516 I NfcService: Starting NFC service
+10-18 13:03:46.714  5516  5516 I NativeNfcManager: Loading C NFC Support
+10-18 13:03:46.718   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.718   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.718   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.718   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.732  5516  5516 D nativeloader: Load libnfc_nci_jni.so using class loader ns clns-shared-9 (caller=/apex/com.android.nfcservices/priv-app/NfcNciApexGoogle@CP41.260828.004.A7/NfcNciApexGoogle.apk): ok
+10-18 13:03:46.735  5516  5516 I libnfc_nci: JNI_OnLoad: NFC Service: loading nci JNI
+10-18 13:03:46.735  5516  5516 I libnfc_nci: ConfigFile - Parsing file '/etc/libnfc-nci.conf'
+10-18 13:03:46.735  5516  5516 I libnfc_nci: ConfigFile - [NFC_DEBUG_ENABLED] = 0
+10-18 13:03:46.735  5516  5516 I libnfc_nci: ConfigFile - [NFA_STORAGE] = "/data/nfc"
+10-18 13:03:46.735  5516  5516 I libnfc_nci: ConfigFile - [PRESERVE_STORAGE] = 0x01
+10-18 13:03:46.735  5516  5516 I libnfc_nci: ConfigFile - [POLLING_TECH_MASK] = 0x0F
+10-18 13:03:46.735  5516  5516 I libnfc_nci: ConfigFile - [UICC_LISTEN_TECH_MASK] = 0x07
+10-18 13:03:46.735  5516  5516 I libnfc_nci: ConfigFile - [NFA_MAX_EE_SUPPORTED] = 0x02
+10-18 13:03:46.735  5516  5516 I libnfc_nci: ConfigFile - [AID_FOR_EMPTY_SELECT] = {08:A0:00:00:01:51:00:00:00}
+10-18 13:03:46.735  5516  5516 I libnfc_nci: ConfigFile - [AID_MATCHING_MODE] = 0x01
+10-18 13:03:46.735  5516  5516 I libnfc_nci: ConfigFile - [NCI_RESET_TYPE] = 0x00
+10-18 13:03:46.735  5516  5516 I libnfc_nci: ConfigFile - [PRESENCE_CHECK_RETRY_COUNT] = 0
+10-18 13:03:46.735  5516  5516 I libnfc_nci: ConfigFile - [EUICC_MEP_MODE] = 0x03
+10-18 13:03:46.735  5516  5516 I libnfc_nci: ConfigFile - [NFCEE_EVENT_RF_DISCOVERY_OPTION] = 0x00
+10-18 13:03:46.735  5516  5516 I libnfc_nci: ConfigFile - [OPTIMIZE_ROUTING_TABLE_UPDATE] = 0x00
+10-18 13:03:46.735  5516  5516 I libnfc_nci: ConfigFile - [NFA_EE_ROUTE_DEBOUNCE_TIMER] = 0x01
+10-18 13:03:46.735  5516  5516 I libnfc_nci: ConfigFile - [KOVIO_PRESENCE_CHECK_TYPE] = 0x00
+10-18 13:03:46.735  5516  5516 I libnfc_nci: ConfigFile - [RECOVERY_OPTION] = 1
+10-18 13:03:46.735  5516  5516 I libnfc_nci: NfcAdaptation:440
+10-18 13:03:46.735  5516  5516 I libnfc_nci: NfcAdaptation::InitializeHalDeviceContext: INfc::getService()
+10-18 13:03:46.737   319   319 I hwservicemanager: getTransport: Cannot find entry android.hardware.nfc@1.2::INfc/default in either framework or device VINTF manifest.
+10-18 13:03:46.738   319   319 I hwservicemanager: getTransport: Cannot find entry android.hardware.nfc@1.1::INfc/default in either framework or device VINTF manifest.
+10-18 13:03:46.738   319   319 I hwservicemanager: getTransport: Cannot find entry android.hardware.nfc@1.0::INfc/default in either framework or device VINTF manifest.
+10-18 13:03:46.758   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.758   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.758   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.765 10380 10402 W Looper  : Slow dispatch took 36ms wmshell.anim app=com.android.systemui main=false group=TOP_APP h=android.view.Choreographer$FrameHandler c=android.view.Choreographer$FrameDisplayEventReceiver@8ccfac2 m=0
+10-18 13:03:46.700     0     0 I servicemanager: Caller(pid=5516,uid=1027,sid=u:r:nfc:s0) Since 'android.hardware.nfc.INfc/default' could not be found trying to start it as a lazy AIDL service. (if it's not configured to be a lazy service, it may be stuck starting or still starting).
+10-18 13:03:46.806   318  5558 W libc    : Unable to set property "ctl.interface_start" to "aidl/android.hardware.nfc.INfc/default": PROP_ERROR_HANDLE_CONTROL_MESSAGE (0x20)
+10-18 13:03:46.806 10380 10402 W Looper  : Slow delivery took 45ms wmshell.anim app=com.android.systemui main=false group=TOP_APP h=android.view.Choreographer$FrameHandler c=android.view.Choreographer$FrameDisplayEventReceiver@8ccfac2 m=0
+10-18 13:03:46.761     0     0 E init    : Control message: Could not find 'aidl/android.hardware.nfc.INfc/default' for ctl.interface_start from pid: 318 (/system/bin/servicemanager)
+10-18 13:03:46.767     0     0 I servicemanager: Caller(pid=5516,uid=1027,sid=u:r:nfc:s0) Tried to start aidl service android.hardware.nfc.INfc/default as a lazy service, but was unable to. Usually this happens when a service is not installed, but if the service is intended to be used as a lazy service, then it may be configured incorrectly.
+10-18 13:03:46.812 10380 10402 W Looper  : Drained
+10-18 13:03:46.818   551   582 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.818   551   582 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.830   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.830   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.830   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.830   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.855 10380 10402 W Looper  : Slow delivery took 31ms wmshell.anim app=com.android.systemui main=false group=TOP_APP h=android.view.Choreographer$FrameHandler c=android.view.Choreographer$FrameDisplayEventReceiver@8ccfac2 m=0
+10-18 13:03:46.858 10380 10402 W Looper  : Drained
+10-18 13:03:46.863 10380 10397 V WindowManagerShell: Transition animation finished (aborted=false), notifying core (#125) android.os.BinderProxy@46f6a6f@0
+10-18 13:03:46.862   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.862   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.862   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.862   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.883   806   859 V WindowManager: Finish Transition (#125): created at 10-18 13:03:46.256 collect-started=0.051ms request-sent=20.567ms started=73.132ms ready=212.317ms sent=216.151ms commit=83.404ms finished=625.904ms
+10-18 13:03:46.882  3280  3280 D VRI[NexusLauncherActivity]: visibilityChanged oldVisibility=true newVisibility=false
+10-18 13:03:46.889 10380 10397 V WindowManagerShell: Track 0 became idle
+10-18 13:03:46.890 10380 10397 V WindowManagerShell: All active transition animations finished
+10-18 13:03:46.891 10380 10460 D WallpaperService: onVisibilityChanged(false): com.android.systemui.wallpapers.ImageWallpaper$CanvasEngine@c9247f6
+10-18 13:03:46.894 10380 10397 W Looper  : Slow dispatch took 30ms wmshell.main app=com.android.systemui main=false group=TOP_APP h=android.os.Handler c=com.android.wm.shell.transition.WindowAnimation$1$$ExternalSyntheticLambda0@112cf9d m=0
+10-18 13:03:46.894   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.909  3280  3280 D SmartspaceInteractor: notifySmartspaceEvent: SmartspaceTargetEvent{mSmartspaceTarget=null, mSmartspaceActionId='null', mEventType=7}
+10-18 13:03:46.912  3280  3280 D BaseActivity: Launcher flags updated: [state_started] -[state_window_focused]
+10-18 13:03:46.912  3280  3280 D ExtendedEditText: onWindowFocusChanged: hasWindowFocus=false
+10-18 13:03:46.912  3280  3280 D ExtendedEditText: resetConnectionAndPendingStates
+10-18 13:03:46.912  3280  3280 D ExtendedEditText: resetConnectionState
+10-18 13:03:46.922   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.922   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.955   551   582 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:46.990  5515  5515 D nativeloader: Configuring clns-9 for other apk /data/app/~~nBFQNYoXwSkoEwGL9_PqLA==/com.example.photoviewer-RDQGZZf3IbAzwhZ-W9jakg==/base.apk. target_sdk_version=37, uses_libraries=, library_path=/data/app/~~nBFQNYoXwSkoEwGL9_PqLA==/com.example.photoviewer-RDQGZZf3IbAzwhZ-W9jakg==/lib/x86_64, permitted_path=/data:/mnt/expand:/data/user/0/com.example.photoviewer
+10-18 13:03:47.014  5515  5515 D ActivityThread: Set OS env TMPDIR to /data/user/0/com.example.photoviewer/cache
+10-18 13:03:47.018  5515  5515 V GraphicsEnvironment: Currently set values for:
+10-18 13:03:47.019  5515  5515 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+10-18 13:03:47.019  5515  5515 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+10-18 13:03:47.019  5515  5515 V GraphicsEnvironment: com.example.photoviewer is not listed in per-application setting
+10-18 13:03:47.019  5515  5515 V GraphicsEnvironment: No special selections for ANGLE, returning default driver choice
+10-18 13:03:47.020  5515  5515 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+10-18 13:03:47.026  5515  5515 D CompatChangeReporter: Compat change id reported: 407952621; UID 10230; state: ENABLED
+10-18 13:03:47.027  5515  5515 D CompatChangeReporter: Compat change id reported: 419020719; UID 10230; state: ENABLED
+10-18 13:03:47.046   551   659 W libbinder.Binder: Binder transaction to android.gui.IDisplayEventConnection, function: requestNextVsync, code: 3, took 18446744073709551614ms. Data bytes: 88 Reply bytes: 0 Flags: 17
+10-18 13:03:47.062   806  3112 D CorePackageUpdate: Couldn't find a persistent state for task= 60
+10-18 13:03:47.062   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:47.079   551   582 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:47.082   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:47.090  5515  5561 I DisplayManager: Choreographer implicitly registered for the refresh rate.
+10-18 13:03:47.102  5515  5515 D ple.photoviewer: Initializing ProtoLog
+10-18 13:03:47.102  5515  5515 D ProtoLog: Initializing ProtoLog DataSource
+10-18 13:03:47.106   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:47.138   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:47.162   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:47.172  5515  5515 D AppCompatDelegate: Checking for metadata for AppLocalesMetadataHolderService : Service not found
+10-18 13:03:47.182   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:47.218   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:47.218   551   582 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:47.242  5515  5561 I GFXSTREAM: [eglDisplay.cpp(297)] Opening libGLESv1_CM_emulation.so
+10-18 13:03:47.245  5515  5561 I GFXSTREAM: [eglDisplay.cpp(297)] Opening libGLESv2_emulation.so
+10-18 13:03:47.250  5515  5561 W libc    : Access denied finding property "vendor.mesa.virtgpu.kumquat"
+10-18 13:03:47.258  5515  5561 W HWUI    : Failed to initialize 101010-2 format, error = EGL_SUCCESS
+10-18 13:03:47.278   806  4033 W libbinder.ServiceManagerCppClient: Waited one second for android.hardware.uwb.IUwb/default (is service started? Number of threads started in the threadpool: 32. Are binder threads started and available?)
+10-18 13:03:47.240     0     0 I servicemanager: Caller(pid=806,uid=1000,sid=u:r:system_server:s0) Since 'android.hardware.uwb.IUwb/default' could not be found trying to start it as a lazy AIDL service. (if it's not configured to be a lazy service, it may be stuck starting or still starting).
+10-18 13:03:47.252     0     0 E init    : Control message: Could not find 'aidl/android.hardware.uwb.IUwb/default' for ctl.interface_start from pid: 318 (/system/bin/servicemanager)
+10-18 13:03:47.299  5515  5515 I ple.photoviewer: hiddenapi: Accessing hidden method Landroid/view/View;->computeFitSystemWindows(Landroid/graphics/Rect;Landroid/graphics/Rect;)Z (runtime_flags=0, domain=platform, api=unsupported) from Landroidx/appcompat/widget/ViewUtils; (domain=app, TargetSdkVersion=37) using reflection: allowed
+10-18 13:03:47.300  5515  5515 I ple.photoviewer: hiddenapi: Accessing hidden method Landroid/view/ViewGroup;->makeOptionalFitsSystemWindows()V (runtime_flags=0, domain=platform, api=unsupported) from Landroidx/appcompat/widget/ViewUtils; (domain=app, TargetSdkVersion=37) using reflection: allowed
+10-18 13:03:47.294   318  5564 W libc    : Unable to set property "ctl.interface_start" to "aidl/android.hardware.uwb.IUwb/default": PROP_ERROR_HANDLE_CONTROL_MESSAGE (0x20)
+10-18 13:03:47.248     0     0 I servicemanager: Caller(pid=806,uid=1000,sid=u:r:system_server:s0) Tried to start aidl service android.hardware.uwb.IUwb/default as a lazy service, but was unable to. Usually this happens when a service is not installed, but if the service is intended to be used as a lazy service, then it may be configured incorrectly.
+10-18 13:03:47.326   551   582 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:47.338  5515  5515 D CompatChangeReporter: Compat change id reported: 418924588; UID 10230; state: ENABLED
+10-18 13:03:47.338  5515  5515 W HWUI    : Unknown dataspace 0
+10-18 13:03:47.304     0     0 I servicemanager: Caller(pid=5515,uid=10230,sid=u:r:untrusted_app:s0:c230,c256,c512,c768) Found android.hardware.graphics.allocator.IAllocator/default in device VINTF manifest.
+10-18 13:03:47.372   806  2871 W InputChannel-JNI: Channel already disposed.
+10-18 13:03:47.314     0     0 I servicemanager: Caller(pid=5515,uid=10230,sid=u:r:untrusted_app:s0:c230,c256,c512,c768) Found android.hardware.graphics.allocator.IAllocator/default in device VINTF manifest.
+10-18 13:03:47.322     0     0 I servicemanager: Caller(pid=5515,uid=10230,sid=u:r:untrusted_app:s0:c230,c256,c512,c768) Found mapper/ranchu in device VINTF manifest.
+10-18 13:03:47.386   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:47.392  5515  5567 W libc    : Access denied finding property "vendor.mesa.virtgpu.kumquat"
+10-18 13:03:47.386  5515  5515 D WindowOnBackDispatcher: setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@ac7a460
+10-18 13:03:47.394  5515  5515 D VRI[MainActivity]: WindowInsets changed: 1080x2400 statusBars:[0,128,0,0] navigationBars:[0,0,0,63] mandatorySystemGestures:[0,160,0,84] 
+10-18 13:03:47.407  5515  5568 D CompatChangeReporter: Compat change id reported: 458413887; UID 10230; state: ENABLED
+10-18 13:03:47.402  5515  5515 I HWUI    : Using FreeType backend (prop=Auto)
+10-18 13:03:47.411  5515  5568 D WindowOnBackDispatcher: setOnBackInvokedCallbackInfo: android.app.Activity$$ExternalSyntheticLambda0@ac7a460
+10-18 13:03:47.413   806  2871 D CoreBackPreview: Window{e8c7944 u0 com.example.photoviewer/com.example.photoviewer.MainActivity}: Setting back callback OnBackInvokedCallbackInfo{mCallback=android.window.IOnBackInvokedCallback$Stub$Proxy@f97d4f3, mPriority=-1, mIsAnimationCallback=false, mOverrideBehavior=0}
+10-18 13:03:47.420   806  2871 D WindowManager: setClientSurface Surface(name=VRI-com.example.photoviewer/com.example.photoviewer.MainActivity#1166)/@0xd79e5b0 for e8c7944 com.example.photoviewer/com.example.photoviewer.MainActivity
+10-18 13:03:47.418  5515  5515 I Surface : Creating surface for consumer unnamed-5515-0 with slotExpansion=1 for 64 slots
+10-18 13:03:47.422  5515  5515 I Surface : Creating surface for consumer VRI[MainActivity]#0(BLAST Consumer)0 with slotExpansion=1 for 64 slots
+10-18 13:03:47.422   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:47.449   551   582 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:47.462   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:47.543   551   582 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:47.714   806   859 I ActivityTaskManager: Displayed com.example.photoviewer/.MainActivity for user 0: +1s466ms
+10-18 13:03:47.717  3280  3280 D BaseActivity: Launcher flags updated: [] -[state_started]
+10-18 13:03:47.717  3280  3280 D BaseDepthController: setSurface:
+10-18 13:03:47.717  3280  3280 D BaseDepthController: 	mWaitingOnSurfaceValidity: false
+10-18 13:03:47.717  3280  3280 D BaseDepthController: 	mBaseSurface: null
+10-18 13:03:47.717  3280  3280 D BaseDepthController: mSurface is null and mCurrentBlur is: 0
+10-18 13:03:47.718  3280  3280 D LauncherStateManager: StateManager.goToState: fromState: Normal, toState: Normal, partial trace:
+10-18 13:03:47.718  3280  3280 D LauncherStateManager: 	at com.android.launcher3.statemanager.StateManager.moveToRestState(go/retraceme fd9d0758bf4aa128afc6a457553abab416b2d3b5243d17c5825077f97151f69b:26)
+10-18 13:03:47.718  3280  3280 D LauncherStateManager: 	at com.android.launcher3.statemanager.StateManager.moveToRestState(go/retraceme fd9d0758bf4aa128afc6a457553abab416b2d3b5243d17c5825077f97151f69b:35)
+10-18 13:03:47.718  3280  3280 D LauncherStateManager: 	at com.android.launcher3.statemanager.StatefulActivity.onStop(go/retraceme fd9d0758bf4aa128afc6a457553abab416b2d3b5243d17c5825077f97151f69b:31)
+10-18 13:03:47.718  3280  3280 D LauncherStateManager: StateManager.onRepeatStateSetAborted: state: Normal
+10-18 13:03:47.719  3280  3280 D KeyboardStateManager: hideKeyboard
+10-18 13:03:47.720  3280  3280 D KeyboardStateManager: isImeShown: false
+10-18 13:03:47.722  3280  3280 D StatsLog: LAUNCHER_ONSTOP
+10-18 13:03:47.723   806  2871 I AppWidgetServiceImpl: No new profiles to load for user 0 profileIds: [0]
+10-18 13:03:47.726  3280  3280 D StatsLog: LAUNCHER_GOOGLE_SEARCH_RESTORE_LIST_SIZE_AFTER_ACTIVITY_RESTART
+10-18 13:03:47.730   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:47.730   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:47.730   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:47.744   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:47.750   551   582 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:47.764  5516  5557 W libbinder.ServiceManagerCppClient: Waited one second for android.hardware.nfc.INfc/default (is service started? Number of threads started in the threadpool: 16. Are binder threads started and available?)
+10-18 13:03:47.766   489   524 I netd    : tetherGetStats() -> {[]} <4.00ms>
+10-18 13:03:47.774   318  5572 W libc    : Unable to set property "ctl.interface_start" to "aidl/android.hardware.nfc.INfc/default": PROP_ERROR_HANDLE_CONTROL_MESSAGE (0x20)
+10-18 13:03:47.726     0     0 I servicemanager: Caller(pid=5516,uid=1027,sid=u:r:nfc:s0) Since 'android.hardware.nfc.INfc/default' could not be found trying to start it as a lazy AIDL service. (if it's not configured to be a lazy service, it may be stuck starting or still starting).
+10-18 13:03:47.736     0     0 E init    : Control message: Could not find 'aidl/android.hardware.nfc.INfc/default' for ctl.interface_start from pid: 318 (/system/bin/servicemanager)
+10-18 13:03:47.725     0     0 I servicemanager: Caller(pid=5516,uid=1027,sid=u:r:nfc:s0) Tried to start aidl service android.hardware.nfc.INfc/default as a lazy service, but was unable to. Usually this happens when a service is not installed, but if the service is intended to be used as a lazy service, then it may be configured incorrectly.
+10-18 13:03:47.801   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:47.802   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:47.828   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:47.840   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:47.856   551   582 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:47.870  3219  4763 I FontLog : Received query Noto Color Emoji Compat, URI content://com.google.android.gms.fonts [CONTEXT service_id=132 ]
+10-18 13:03:47.870  3219  4763 I FontLog : Query [emojicompat-emoji-font] resolved to {Noto Color Emoji Compat, wdth 100.0, wght 400, ital 0.0, bestEffort false}, isVf false} [CONTEXT service_id=132 ]
+10-18 13:03:47.879  3219  4763 I FontLog : Fetch {Noto Color Emoji Compat, wdth 100.0, wght 400, ital 0.0, bestEffort false}, isVf false} end status Status{statusCode=SUCCESS, resolution=null} [CONTEXT service_id=132 ]
+10-18 13:03:47.885  3219  4763 I FontLog : Pulling font file for id = 51, cache size = 5 [CONTEXT service_id=132 ]
+10-18 13:03:47.895   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:47.899  3219  4763 I FontLog : Pulling font file for id = 51, cache size = 5 [CONTEXT service_id=132 ]
+10-18 13:03:47.928   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:47.928   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:47.945   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:47.945   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:47.962   551   582 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:47.993   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:47.994   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:48.023   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:48.024   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:48.071   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:48.071   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:48.085   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:48.085   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:48.123   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:48.123   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:48.147   551   582 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:48.168   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:48.169   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:48.194   551   659 W libbinder.Binder: Binder transaction to android.gui.IDisplayEventConnection, function: requestNextVsync, code: 3, took 18446744073709551609ms. Data bytes: 88 Reply bytes: 0 Flags: 17
+10-18 13:03:48.202   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:48.202   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:48.219 10380 10405 W FrameTracker: Missed App frame:jankTypeLegacy: UNKNOWN: 3, jankType: JANK_NONE, vsyncId: 93094, totalDuration: 49092318, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+10-18 13:03:48.219 10380 10405 W FrameTracker: Missed SF frame:jankTypeLegacy: UNKNOWN: 3, jankType: JANK_NONE, vsyncId: 93094, totalDuration: 49092318, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+10-18 13:03:48.219 10380 10405 W FrameTracker: Missed App frame:jankTypeLegacy: UNKNOWN: 3, jankType: JANK_NONE, vsyncId: 93100, totalDuration: 72183323, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+10-18 13:03:48.219 10380 10405 W FrameTracker: Missed SF frame:jankTypeLegacy: UNKNOWN: 3, jankType: JANK_NONE, vsyncId: 93100, totalDuration: 72183323, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+10-18 13:03:48.219 10380 10405 W FrameTracker: Missed SF frame:jankTypeLegacy: JANK_COMPOSER, jankType: JANK_NONE, vsyncId: 93107, totalDuration: 54407920, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+10-18 13:03:48.219 10380 10405 W FrameTracker: Missed App frame:jankTypeLegacy: UNKNOWN: 3, jankType: JANK_NONE, vsyncId: 93124, totalDuration: 51616468, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+10-18 13:03:48.219 10380 10405 W FrameTracker: Missed SF frame:jankTypeLegacy: UNKNOWN: 3, jankType: JANK_NONE, vsyncId: 93124, totalDuration: 51616468, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+10-18 13:03:48.219 10380 10405 W FrameTracker: Missed App frame:jankTypeLegacy: UNKNOWN: 3, jankType: UNKNOWN: 3, vsyncId: 93133, totalDuration: 87115679, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+10-18 13:03:48.219 10380 10405 W FrameTracker: Missed SF frame:jankTypeLegacy: UNKNOWN: 3, jankType: UNKNOWN: 3, vsyncId: 93133, totalDuration: 87115679, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+10-18 13:03:48.219 10380 10405 W FrameTracker: Missed SF frame:jankTypeLegacy: JANK_COMPOSER, jankType: JANK_APPLICATION, vsyncId: 93139, totalDuration: 70443467, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+10-18 13:03:48.219 10380 10405 W FrameTracker: Missed App frame:jankTypeLegacy: JANK_APPLICATION, jankType: JANK_APPLICATION, vsyncId: 93170, totalDuration: 88198279, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+10-18 13:03:48.219 10380 10405 W FrameTracker: Missed App frame:jankTypeLegacy: UNKNOWN: 3, jankType: JANK_APPLICATION, vsyncId: 93178, totalDuration: 72046700, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+10-18 13:03:48.219 10380 10405 W FrameTracker: Missed SF frame:jankTypeLegacy: UNKNOWN: 3, jankType: JANK_APPLICATION, vsyncId: 93178, totalDuration: 72046700, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+10-18 13:03:48.219 10380 10405 W FrameTracker: Missed App frame:jankTypeLegacy: UNKNOWN: 3, jankType: JANK_APPLICATION, vsyncId: 93185, totalDuration: 91111296, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+10-18 13:03:48.219 10380 10405 W FrameTracker: Missed SF frame:jankTypeLegacy: UNKNOWN: 3, jankType: JANK_APPLICATION, vsyncId: 93185, totalDuration: 91111296, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+10-18 13:03:48.219 10380 10405 W FrameTracker: Missed SF frame:jankTypeLegacy: JANK_COMPOSER, jankType: UNKNOWN: 3, vsyncId: 93193, totalDuration: 81115687, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+10-18 13:03:48.219 10380 10405 W FrameTracker: Missed App frame:jankTypeLegacy: UNKNOWN: 3, jankType: JANK_APPLICATION, vsyncId: 93201, totalDuration: 95782355, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+10-18 13:03:48.219 10380 10405 W FrameTracker: Missed SF frame:jankTypeLegacy: UNKNOWN: 3, jankType: JANK_APPLICATION, vsyncId: 93201, totalDuration: 95782355, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+10-18 13:03:48.219 10380 10405 W FrameTracker: Missed App frame:jankTypeLegacy: UNKNOWN: 3, jankType: JANK_APPLICATION, vsyncId: 93209, totalDuration: 113199355, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+10-18 13:03:48.219 10380 10405 W FrameTracker: Missed SF frame:jankTypeLegacy: UNKNOWN: 3, jankType: JANK_APPLICATION, vsyncId: 93209, totalDuration: 113199355, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+10-18 13:03:48.219 10380 10405 W FrameTracker: Missed App frame:jankTypeLegacy: UNKNOWN: 3, jankType: JANK_APPLICATION, vsyncId: 93217, totalDuration: 113115692, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+10-18 13:03:48.219 10380 10405 W FrameTracker: Missed SF frame:jankTypeLegacy: UNKNOWN: 3, jankType: JANK_APPLICATION, vsyncId: 93217, totalDuration: 113115692, CUJ=J<SPLASHSCREEN_EXIT_ANIM>
+10-18 13:03:48.169     0     0 I init    : starting service 'vendor.uwb_hal'...
+10-18 13:03:48.174     0     0 I libprocessgroup: Created cgroup /sys/fs/cgroup/system/uid_1083/pid_5578
+10-18 13:03:48.178     0     0 I init    : ... started service 'vendor.uwb_hal' has pid 5578
+10-18 13:03:48.222  5578  5578 I android.hardware.uwb: uwb_default_hal: UWB HAL starting up
+10-18 13:03:48.230  5578  5578 E android.hardware.uwb: uwb_default_hal: panicked at hardware/interfaces/uwb/aidl/default/src/uwb_chip.rs:56:14:
+10-18 13:03:48.230  5578  5578 E android.hardware.uwb: failed to open the serial device: Os { code: 6, kind: Uncategorized, message: "No such device or address" }
+--------- beginning of crash
+10-18 13:03:48.230  5578  5578 F libc    : Fatal signal 6 (SIGABRT), code -1 (SI_QUEUE) in tid 5578 (android.hardwar), pid 5578 (android.hardwar)
+10-18 13:03:48.248  5591  5591 I crash_dump64: obtaining output fd from tombstoned, type: kDebuggerdTombstoneProto
+10-18 13:03:48.248   392   392 I tombstoned: received crash request for pid 5578
+10-18 13:03:48.250  5591  5591 I crash_dump64: performing dump of process 5578 (target tid = 5578)
+10-18 13:03:48.250   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:48.250   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:48.260   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:48.260   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:48.274   551   582 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:48.280   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:48.281   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:48.236     0     0 I logd    : logdr: UID=1083 GID=0 PID=5591 n tail=500 logMask=8 pid=5578 start=0ns deadline=0ns
+10-18 13:03:48.241     0     0 I logd    : logdr: UID=1083 GID=0 PID=5591 n tail=500 logMask=1 pid=5578 start=0ns deadline=0ns
+10-18 13:03:48.285  5591  5591 F DEBUG   : *** *** *** *** *** *** *** *** *** *** *** *** *** *** *** ***
+10-18 13:03:48.285  5591  5591 F DEBUG   : Build fingerprint: 'google/sdk_gphone16k_x86_64/emu64xa16k:17/CP41.260828.004.A7/16296984:userdebug/dev-keys'
+10-18 13:03:48.285  5591  5591 F DEBUG   : Kernel Release: '6.12.81-android16-6-g4f69fc7b210c-ab16167562'
+10-18 13:03:48.285  5591  5591 F DEBUG   : Revision: '0'
+10-18 13:03:48.285  5591  5591 F DEBUG   : ABI: 'x86_64'
+10-18 13:03:48.285  5591  5591 F DEBUG   : Timestamp: 2026-10-18 13:03:48.251796297+0900
+10-18 13:03:48.285  5591  5591 F DEBUG   : Process uptime: 1s
+10-18 13:03:48.285  5591  5591 F DEBUG   : Page size: 16384 bytes
+10-18 13:03:48.286  5591  5591 F DEBUG   : Executable: /vendor/bin/hw/android.hardware.uwb-service
+10-18 13:03:48.286  5591  5591 F DEBUG   : Cmdline: /vendor/bin/hw/android.hardware.uwb-service /dev/uwb0
+10-18 13:03:48.286  5591  5591 F DEBUG   : pid: 5578, ppid: 1, tid: 5578, name: android.hardwar  >>> /vendor/bin/hw/android.hardware.uwb-service <<<
+10-18 13:03:48.286  5591  5591 F DEBUG   : uid: 1083
+10-18 13:03:48.286  5591  5591 F DEBUG   : signal 6 (SIGABRT), code -1 (SI_QUEUE), fault addr --------
+10-18 13:03:48.286  5591  5591 F DEBUG   : Abort message: 'failed to open the serial device: Os { code: 6, kind: Uncategorized, message: "No such device or address" }'
+10-18 13:03:48.286  5591  5591 F DEBUG   : 
+10-18 13:03:48.286  5591  5591 F DEBUG   :     rax 0000000000000000  rbx 00000000000015ca  rcx 000078aec867706d  rdx 0000000000000006
+10-18 13:03:48.286  5591  5591 F DEBUG   :     r8  00007ffbbc7733c0  r9  00007ffbbc7733c0  r10 00007ffbbc773180  r11 0000000000000207
+10-18 13:03:48.286  5591  5591 F DEBUG   :     r12 0000000000000000  r13 00007ffbbc773320  r14 00000000000015ca  r15 00007ffbbc773180
+10-18 13:03:48.286  5591  5591 F DEBUG   :     rdi 00000000000015ca  rsi 00000000000015ca
+10-18 13:03:48.286  5591  5591 F DEBUG   :     rbp 00007ffbbc773230  rsp 00007ffbbc773180  rip 000078aec867706d  err 0000000000000000
+10-18 13:03:48.286  5591  5591 F DEBUG   : 
+10-18 13:03:48.286  5591  5591 F DEBUG   : 18 total frames
+10-18 13:03:48.286  5591  5591 F DEBUG   : backtrace:
+10-18 13:03:48.286  5591  5591 F DEBUG   :       #00 pc 000000000005b06d  /apex/com.android.runtime/lib64/bionic/libc.so (abort+189) (BuildId: 6a12fb8c62f84cd3689f4044ef042df1)
+10-18 13:03:48.286  5591  5591 F DEBUG   :       #01 pc 000000000003ed09  /vendor/bin/hw/android.hardware.uwb-service (std::sys::pal::unix::abort_internal+9) (BuildId: b8f3093f355d6b415637c050fb6e8cf4)
+10-18 13:03:48.286  5591  5591 F DEBUG   :       #02 pc 000000000003c488  /vendor/bin/hw/android.hardware.uwb-service (std::process::abort+8) (BuildId: b8f3093f355d6b415637c050fb6e8cf4)
+10-18 13:03:48.286  5591  5591 F DEBUG   :       #03 pc 0000000000038e89  /vendor/bin/hw/android.hardware.uwb-service (__rustc::__rust_abort+9) (BuildId: b8f3093f355d6b415637c050fb6e8cf4)
+10-18 13:03:48.286  5591  5591 F DEBUG   :       #04 pc 000000000002d262  /vendor/bin/hw/android.hardware.uwb-service (__rustc::__rust_start_panic+18) (BuildId: b8f3093f355d6b415637c050fb6e8cf4)
+10-18 13:03:48.286  5591  5591 F DEBUG   :       #05 pc 0000000000038e79  /vendor/bin/hw/android.hardware.uwb-service (__rustc::rust_panic+9) (BuildId: b8f3093f355d6b415637c050fb6e8cf4)
+10-18 13:03:48.286  5591  5591 F DEBUG   :       #06 pc 000000000003c72f  /vendor/bin/hw/android.hardware.uwb-service (std::panicking::panic_with_hook+260) (BuildId: b8f3093f355d6b415637c050fb6e8cf4)
+10-18 13:03:48.286  5591  5591 F DEBUG   :       #07 pc 0000000000038516  /vendor/bin/hw/android.hardware.uwb-service (std::panicking::panic_handler::{closure#0}+70) (BuildId: b8f3093f355d6b415637c050fb6e8cf4)
+10-18 13:03:48.286  5591  5591 F DEBUG   :       #08 pc 0000000000038eab  /vendor/bin/hw/android.hardware.uwb-service (__rustc::rust_begin_unwind+27) (BuildId: b8f3093f355d6b415637c050fb6e8cf4)
+10-18 13:03:48.286  5591  5591 F DEBUG   :       #09 pc 00000000000253db  /vendor/bin/hw/android.hardware.uwb-service (core::panicking::panic_fmt+43) (BuildId: b8f3093f355d6b415637c050fb6e8cf4)
+10-18 13:03:48.286  5591  5591 F DEBUG   :       #10 pc 0000000000025261  /vendor/bin/hw/android.hardware.uwb-service (core::result::unwrap_failed+81) (BuildId: b8f3093f355d6b415637c050fb6e8cf4)
+10-18 13:03:48.286  5591  5591 F DEBUG   :       #11 pc 00000000000641af  /vendor/bin/hw/android.hardware.uwb-service (<uwb_default_hal::uwb_chip::UwbChip>::new::{closure#0}+7999) (BuildId: b8f3093f355d6b415637c050fb6e8cf4)
+10-18 13:03:48.286  5591  5591 F DEBUG   :       #12 pc 000000000006865a  /vendor/bin/hw/android.hardware.uwb-service (<core::iter::adapters::map::Map<core::iter::adapters::map::Map<core::iter::adapters::enumerate::Enumerate<core::iter::adapters::skip::Skip<std::env::Args>>, uwb_default_hal::main::{closure#1}>, <uwb_default_hal::uwb::Uwb>::from_chips<core::iter::adapters::map::Map<core::iter::adapters::enumerate::Enumerate<core::iter::adapters::skip::Skip<std::env::Args>>, uwb_default_hal::main::{closure#1}>>::{closure#0}> as core::iter::traits::iterator::Iterator>::next+3434) (BuildId: b8f3093f355d6b415637c050fb6e8cf4)
+10-18 13:03:48.286  5591  5591 F DEBUG   :       #13 pc 0000000000065c77  /vendor/bin/hw/android.hardware.uwb-service (uwb_default_hal::main+791) (BuildId: b8f3093f355d6b415637c050fb6e8cf4)
+10-18 13:03:48.286  5591  5591 F DEBUG   :       #14 pc 00000000000619fb  /vendor/bin/hw/android.hardware.uwb-service (std::rt::lang_start::<core::result::Result<(), anyhow::Error>>::{closure#0}+27) (BuildId: b8f3093f355d6b415637c050fb6e8cf4)
+10-18 13:03:48.286  5591  5591 F DEBUG   :       #15 pc 000000000003bce6  /vendor/bin/hw/android.hardware.uwb-service (std::rt::lang_start_internal+534) (BuildId: b8f3093f355d6b415637c050fb6e8cf4)
+10-18 13:03:48.286  5591  5591 F DEBUG   :       #16 pc 000000000006b193  /vendor/bin/hw/android.hardware.uwb-service (main+51) (BuildId: b8f3093f355d6b415637c050fb6e8cf4)
+10-18 13:03:48.286  5591  5591 F DEBUG   :       #17 pc 00000000000c3c10  /apex/com.android.runtime/lib64/bionic/libc.so (__libc_init+112) (BuildId: 6a12fb8c62f84cd3689f4044ef042df1)
+10-18 13:03:48.286  5591  5591 F DEBUG   : 
+10-18 13:03:48.286  5591  5591 F DEBUG   : Note: To display stack pointer information, use the pbtombstone tool:
+10-18 13:03:48.286  5591  5591 F DEBUG   :         pbtombstone --display-sp tombstone_XX.pb
+10-18 13:03:48.290   806  2790 W NativeCrashListener: Couldn't find ProcessRecord for pid 5578
+10-18 13:03:48.290  5591  5591 E crash_dump64: AM data write failed: Broken pipe
+10-18 13:03:48.291   392   392 E tombstoned: Tombstone written to: tombstone_22
+10-18 13:03:48.290   806  4033 W libbinder.ServiceManagerCppClient: Waited one second for android.hardware.uwb.IUwb/default (is service started? Number of threads started in the threadpool: 32. Are binder threads started and available?)
+10-18 13:03:48.294   806  1663 E NativeTombstoneManager: Tombstone's UID (1083) not an app, ignoring
+10-18 13:03:48.304   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:48.304   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:48.254     0     0 I servicemanager: Caller(pid=806,uid=1000,sid=u:r:system_server:s0) Since 'android.hardware.uwb.IUwb/default' could not be found trying to start it as a lazy AIDL service. (if it's not configured to be a lazy service, it may be stuck starting or still starting).
+10-18 13:03:48.249     0     0 I init    : Service 'vendor.uwb_hal' (pid 5578) received SIGABRT
+10-18 13:03:48.251     0     0 I init    : Sending SIGKILL to service 'vendor.uwb_hal' (pid 5578) process group...
+10-18 13:03:48.259     0     0 I libprocessgroup: Removed cgroup /sys/fs/cgroup/system/uid_1083/pid_5578
+10-18 13:03:48.261     0     0 E init    : process with updatable components 'vendor.uwb_hal' exited 4 times in 4 minutes
+10-18 13:03:48.268     0     0 I init    : Untracked process (pid: 5591 name: (crash_dump64) ppid: 1 pgrp: 5590 state: Z) exited with status 0
+10-18 13:03:48.332   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:48.277     0     0 I init    : Untracked process (pid: 5591 name: (crash_dump64) ppid: 1 pgrp: 5590 state: Z) did not have an associated service entry and will not be reaped
+10-18 13:03:48.281     0     0 I init    : Untracked process (pid: 5593 name: (android.hardwar) ppid: 1 pgrp: 5578 state: Z) received SIGKILL
+10-18 13:03:48.287     0     0 I init    : Untracked process (pid: 5593 name: (android.hardwar) ppid: 1 pgrp: 5578 state: Z) did not have an associated service entry and will not be reaped
+10-18 13:03:48.292     0     0 E init    : Control message: Could not find 'aidl/android.hardware.uwb.IUwb/default' for ctl.interface_start from pid: 318 (/system/bin/servicemanager)
+10-18 13:03:48.294     0     0 I init    : processing action (sys.init.updatable_crashing=1) from (/system/etc/init/flags_health_check.rc:10)
+10-18 13:03:48.306     0     0 I servicemanager: Caller(pid=806,uid=1000,sid=u:r:system_server:s0) Tried to start aidl service android.hardware.uwb.IUwb/default as a lazy service, but was unable to. Usually this happens when a service is not installed, but if the service is intended to be used as a lazy service, then it may be configured incorrectly.
+10-18 13:03:48.297     0     0 I init    : starting service 'exec 1188 (/system/bin/flags_health_check UPDATABLE_CRASHING)'...
+10-18 13:03:48.340   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:48.340   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:48.346   318  5600 W libc    : Unable to set property "ctl.interface_start" to "aidl/android.hardware.uwb.IUwb/default": PROP_ERROR_HANDLE_CONTROL_MESSAGE (0x20)
+10-18 13:03:48.355   551   582 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:48.364   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:48.317     0     0 I libprocessgroup: Created cgroup /sys/fs/cgroup/system/uid_1000/pid_5605
+10-18 13:03:48.376   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:48.376   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:48.399  5605  5605 I flags_health_check: ServerConfigurableFlagsReset reset_mode value: 1
+10-18 13:03:48.399  5605  5605 I flags_health_check: ServerConfigurableFlagsReset updatable crashing detected, resetting flags.
+10-18 13:03:48.334     0     0 I init    : ... started service 'exec 1188 (/system/bin/flags_health_check UPDATABLE_CRASHING)' has pid 5605
+10-18 13:03:48.355     0     0 I init    : SVC_EXEC service 'exec 1188 (/system/bin/flags_health_check UPDATABLE_CRASHING)' pid 5605 (uid 1000 gid 1000+0 context default) started; waiting...
+10-18 13:03:48.357     0     0 I init    : Command 'exec - system system -- /system/bin/flags_health_check UPDATABLE_CRASHING' action=sys.init.updatable_crashing=1 (/system/etc/init/flags_health_check.rc:11) took 51ms and succeeded
+10-18 13:03:48.402   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:48.367     0     0 I init    : Service 'exec 1188 (/system/bin/flags_health_check UPDATABLE_CRASHING)' (pid 5605) exited with status 0 waiting took 0.041000 seconds
+10-18 13:03:48.371     0     0 I init    : Sending SIGKILL to service 'exec 1188 (/system/bin/flags_health_check UPDATABLE_CRASHING)' (pid 5605) process group...
+10-18 13:03:48.374     0     0 I libprocessgroup: Removed cgroup /sys/fs/cgroup/system/uid_1000/pid_5605
+10-18 13:03:48.487   551   582 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:48.779  5516  5557 W libbinder.ServiceManagerCppClient: Waited one second for android.hardware.nfc.INfc/default (is service started? Number of threads started in the threadpool: 16. Are binder threads started and available?)
+10-18 13:03:48.740     0     0 I servicemanager: Caller(pid=5516,uid=1027,sid=u:r:nfc:s0) Since 'android.hardware.nfc.INfc/default' could not be found trying to start it as a lazy AIDL service. (if it's not configured to be a lazy service, it may be stuck starting or still starting).
+10-18 13:03:48.794   318  5607 W libc    : Unable to set property "ctl.interface_start" to "aidl/android.hardware.nfc.INfc/default": PROP_ERROR_HANDLE_CONTROL_MESSAGE (0x20)
+10-18 13:03:48.750     0     0 E init    : Control message: Could not find 'aidl/android.hardware.nfc.INfc/default' for ctl.interface_start from pid: 318 (/system/bin/servicemanager)
+10-18 13:03:48.755     0     0 I servicemanager: Caller(pid=5516,uid=1027,sid=u:r:nfc:s0) Tried to start aidl service android.hardware.nfc.INfc/default as a lazy service, but was unable to. Usually this happens when a service is not installed, but if the service is intended to be used as a lazy service, then it may be configured incorrectly.
+10-18 13:03:48.965  5515  5532 I ple.photoviewer: Compiler allocated 4522KB to compile void android.view.ViewRootImpl.performTraversals(long)
+10-18 13:03:49.338   806  4033 W libbinder.ServiceManagerCppClient: Waited one second for android.hardware.uwb.IUwb/default (is service started? Number of threads started in the threadpool: 32. Are binder threads started and available?)
+10-18 13:03:49.299     0     0 I servicemanager: Caller(pid=806,uid=1000,sid=u:r:system_server:s0) Since 'android.hardware.uwb.IUwb/default' could not be found trying to start it as a lazy AIDL service. (if it's not configured to be a lazy service, it may be stuck starting or still starting).
+10-18 13:03:49.350   318  5610 W libc    : Unable to set property "ctl.interface_start" to "aidl/android.hardware.uwb.IUwb/default": PROP_ERROR_HANDLE_CONTROL_MESSAGE (0x20)
+10-18 13:03:49.311     0     0 E init    : Control message: Could not find 'aidl/android.hardware.uwb.IUwb/default' for ctl.interface_start from pid: 318 (/system/bin/servicemanager)
+10-18 13:03:49.304     0     0 I servicemanager: Caller(pid=806,uid=1000,sid=u:r:system_server:s0) Tried to start aidl service android.hardware.uwb.IUwb/default as a lazy service, but was unable to. Usually this happens when a service is not installed, but if the service is intended to be used as a lazy service, then it may be configured incorrectly.
+10-18 13:03:49.511  3026  3349 E SatelliteController: isSatelliteEnabled: mIsSatelliteEnabled=null
+10-18 13:03:49.511  3026  3349 D SatelliteController: isInCarrierRoamingNbIotNtn: satellite is disabled
+10-18 13:03:49.511  3026  3349 D SatelliteController: getCarrierRoamingNtnConnectType: Checking connect type from PLMN config for subId: 1
+10-18 13:03:49.511  3026  3349 D TelephonyConfigUpdateInstallReceiver: getConfigParser: domain=satellite
+10-18 13:03:49.511  3026  3349 V SatelliteController: satelliteConfigParser is not ready
+10-18 13:03:49.511  3026  3349 D SatelliteController: isSatelliteAttachSupportedViaConfigupdater: return null (satelliteConfig is null)
+10-18 13:03:49.514  3026  3349 D SatelliteController: getConfigForSubId: subId= 1, config= PersistableBundle[{satellite_esos_supported_bool=false, satellite_connection_hysteresis_sec_int=180, satellite_supported_disaster_plmn_string_array=[], regional_satellite_earfcn_bundle=PersistableBundle[{}], satellite_entitlement_supported_bool=true, satellite_supported_emergency_plmn_string_array=[], satellite_configs_per_plmn_bundle=PersistableBundle[{}], satellite_sos_max_datagram_size_bytes_int=255, satellite_supported_msg_apps_string_array=[com.google.android.apps.messaging], satellite_connected_notification_throttle_millis_int=604800000, override_satellite_as_unconstrained_bool=false, satellite_display_name_string=, satellite_roaming_p2p_sms_inactivity_timeout_sec_int=180, satellite_roaming_turn_off_session_for_emergency_call_bool=true, emergency_messaging_supported_bool=true, carrier_roaming_satellite_emergency_messaging_provider_per_country_bundle=PersistableBundle[{}], satellite_data_support_mode_int=0, carrier_roaming_ntn_connect_type_int=0, satellite_attach_supported_bool=false, carrier_roaming_satellite_emergency_messaging_redirection_destination_string=911, satellite_nidd_apn_name_string=, carrier_supported_satellite_services_per_provider_bundle=PersistableBundle[{310830=[2, 3, 6]}], satellite_roaming_esos_inactivity_timeout_sec_int=300, carrier_supported_satellite_notification_hysteresis_sec_int=180, carrier_config_applied_bool=true, carrier_roaming_ntn_emergency_call_to_satellite_handover_type_int=2, carrier_roaming_satellite_default_services_int_array=[2, 3, 6], imsserviceentitlement.entitlement_server_url_string=https://ts43.eas3.msg.t-mobile.com/google?, emergency_call_to_satellite_t911_handover_timeout_millis_int=30000, satellite_roaming_p2p_sms_supported_bool=false, carrier_config_version_string=, satellite_roaming_screen_off_inactivity_timeout_sec_int=30}]
+10-18 13:03:49.514  3026  3349 D SatelliteController: isSatelliteSupportedViaCarrier: using CarrierConfig for subId=1, isAttachSupported=false
+10-18 13:03:49.514  3026  3349 D SatelliteController: getSatellitePerPlmnConfiguration: invalid subId or not supported via carrier.
+10-18 13:03:49.514  3026  3349 D SatelliteController: getCarrierRoamingNtnConnectType: config: null
+10-18 13:03:49.514  3026  3349 D TelephonyConfigUpdateInstallReceiver: getConfigParser: domain=satellite
+10-18 13:03:49.514  3026  3349 V SatelliteController: satelliteConfigParser is not ready
+10-18 13:03:49.514  3026  3349 D SatelliteController: getCarrierRoamingNtnConnectTypeViaConfigUpdater: return null (satelliteConfig is null)
+10-18 13:03:49.516  3026  3349 D SatelliteController: getConfigForSubId: subId= 1, config= PersistableBundle[{satellite_esos_supported_bool=false, satellite_connection_hysteresis_sec_int=180, satellite_supported_disaster_plmn_string_array=[], regional_satellite_earfcn_bundle=PersistableBundle[{}], satellite_entitlement_supported_bool=true, satellite_supported_emergency_plmn_string_array=[], satellite_configs_per_plmn_bundle=PersistableBundle[{}], satellite_sos_max_datagram_size_bytes_int=255, satellite_supported_msg_apps_string_array=[com.google.android.apps.messaging], satellite_connected_notification_throttle_millis_int=604800000, override_satellite_as_unconstrained_bool=false, satellite_display_name_string=, satellite_roaming_p2p_sms_inactivity_timeout_sec_int=180, satellite_roaming_turn_off_session_for_emergency_call_bool=true, emergency_messaging_supported_bool=true, carrier_roaming_satellite_emergency_messaging_provider_per_country_bundle=PersistableBundle[{}], satellite_data_support_mode_int=0, carrier_roaming_ntn_connect_type_int=0, satellite_attach_supported_bool=false, carrier_roaming_satellite_emergency_messaging_redirection_destination_string=911, satellite_nidd_apn_name_string=, carrier_supported_satellite_services_per_provider_bundle=PersistableBundle[{310830=[2, 3, 6]}], satellite_roaming_esos_inactivity_timeout_sec_int=300, carrier_supported_satellite_notification_hysteresis_sec_int=180, carrier_config_applied_bool=true, carrier_roaming_ntn_emergency_call_to_satellite_handover_type_int=2, carrier_roaming_satellite_default_services_int_array=[2, 3, 6], imsserviceentitlement.entitlement_server_url_string=https://ts43.eas3.msg.t-mobile.com/google?, emergency_call_to_satellite_t911_handover_timeout_millis_int=30000, satellite_roaming_p2p_sms_supported_bool=false, carrier_config_version_string=, satellite_roaming_screen_off_inactivity_timeout_sec_int=30}]
+10-18 13:03:49.516  3026  3349 D SatelliteController: getCarrierRoamingNtnConnectType: Falling back to global carrier config connect type: 0
+10-18 13:03:49.516  3026  3349 D TelephonyConfigUpdateInstallReceiver: getConfigParser: domain=satellite
+10-18 13:03:49.516  3026  3349 V SatelliteController: satelliteConfigParser is not ready
+10-18 13:03:49.516  3026  3349 D SatelliteController: isSatelliteAttachSupportedViaConfigupdater: return null (satelliteConfig is null)
+10-18 13:03:49.517  3026  3349 D SatelliteController: getConfigForSubId: subId= 1, config= PersistableBundle[{satellite_esos_supported_bool=false, satellite_connection_hysteresis_sec_int=180, satellite_supported_disaster_plmn_string_array=[], regional_satellite_earfcn_bundle=PersistableBundle[{}], satellite_entitlement_supported_bool=true, satellite_supported_emergency_plmn_string_array=[], satellite_configs_per_plmn_bundle=PersistableBundle[{}], satellite_sos_max_datagram_size_bytes_int=255, satellite_supported_msg_apps_string_array=[com.google.android.apps.messaging], satellite_connected_notification_throttle_millis_int=604800000, override_satellite_as_unconstrained_bool=false, satellite_display_name_string=, satellite_roaming_p2p_sms_inactivity_timeout_sec_int=180, satellite_roaming_turn_off_session_for_emergency_call_bool=true, emergency_messaging_supported_bool=true, carrier_roaming_satellite_emergency_messaging_provider_per_country_bundle=PersistableBundle[{}], satellite_data_support_mode_int=0, carrier_roaming_ntn_connect_type_int=0, satellite_attach_supported_bool=false, carrier_roaming_satellite_emergency_messaging_redirection_destination_string=911, satellite_nidd_apn_name_string=, carrier_supported_satellite_services_per_provider_bundle=PersistableBundle[{310830=[2, 3, 6]}], satellite_roaming_esos_inactivity_timeout_sec_int=300, carrier_supported_satellite_notification_hysteresis_sec_int=180, carrier_config_applied_bool=true, carrier_roaming_ntn_emergency_call_to_satellite_handover_type_int=2, carrier_roaming_satellite_default_services_int_array=[2, 3, 6], imsserviceentitlement.entitlement_server_url_string=https://ts43.eas3.msg.t-mobile.com/google?, emergency_call_to_satellite_t911_handover_timeout_millis_int=30000, satellite_roaming_p2p_sms_supported_bool=false, carrier_config_version_string=, satellite_roaming_screen_off_inactivity_timeout_sec_int=30}]
+10-18 13:03:49.517  3026  3349 D SatelliteController: isSatelliteSupportedViaCarrier: using CarrierConfig for subId=1, isAttachSupported=false
+10-18 13:03:49.517  3026  3349 D SatelliteController: isInSatelliteModeForCarrierRoaming: subId=1, connectType=0, result=false
+10-18 13:03:49.517  3026  3349 D SatelliteController: getCarrierRoamingNtnConnectType: Checking connect type from PLMN config for subId: 1
+10-18 13:03:49.517  3026  3349 D TelephonyConfigUpdateInstallReceiver: getConfigParser: domain=satellite
+10-18 13:03:49.517  3026  3349 V SatelliteController: satelliteConfigParser is not ready
+10-18 13:03:49.517  3026  3349 D SatelliteController: isSatelliteAttachSupportedViaConfigupdater: return null (satelliteConfig is null)
+10-18 13:03:49.517  3026  3349 D SatelliteController: getConfigForSubId: subId= 1, config= PersistableBundle[{satellite_esos_supported_bool=false, satellite_connection_hysteresis_sec_int=180, satellite_supported_disaster_plmn_string_array=[], regional_satellite_earfcn_bundle=PersistableBundle[{}], satellite_entitlement_supported_bool=true, satellite_supported_emergency_plmn_string_array=[], satellite_configs_per_plmn_bundle=PersistableBundle[{}], satellite_sos_max_datagram_size_bytes_int=255, satellite_supported_msg_apps_string_array=[com.google.android.apps.messaging], satellite_connected_notification_throttle_millis_int=604800000, override_satellite_as_unconstrained_bool=false, satellite_display_name_string=, satellite_roaming_p2p_sms_inactivity_timeout_sec_int=180, satellite_roaming_turn_off_session_for_emergency_call_bool=true, emergency_messaging_supported_bool=true, carrier_roaming_satellite_emergency_messaging_provider_per_country_bundle=PersistableBundle[{}], satellite_data_support_mode_int=0, carrier_roaming_ntn_connect_type_int=0, satellite_attach_supported_bool=false, carrier_roaming_satellite_emergency_messaging_redirection_destination_string=911, satellite_nidd_apn_name_string=, carrier_supported_satellite_services_per_provider_bundle=PersistableBundle[{310830=[2, 3, 6]}], satellite_roaming_esos_inactivity_timeout_sec_int=300, carrier_supported_satellite_notification_hysteresis_sec_int=180, carrier_config_applied_bool=true, carrier_roaming_ntn_emergency_call_to_satellite_handover_type_int=2, carrier_roaming_satellite_default_services_int_array=[2, 3, 6], imsserviceentitlement.entitlement_server_url_string=https://ts43.eas3.msg.t-mobile.com/google?, emergency_call_to_satellite_t911_handover_timeout_millis_int=30000, satellite_roaming_p2p_sms_supported_bool=false, carrier_config_version_string=, satellite_roaming_screen_off_inactivity_timeout_sec_int=30}]
+10-18 13:03:49.517  3026  3349 D SatelliteController: isSatelliteSupportedViaCarrier: using CarrierConfig for subId=1, isAttachSupported=false
+10-18 13:03:49.517  3026  3349 D SatelliteController: getSatellitePerPlmnConfiguration: invalid subId or not supported via carrier.
+10-18 13:03:49.517  3026  3349 D SatelliteController: getCarrierRoamingNtnConnectType: config: null
+10-18 13:03:49.517  3026  3349 D TelephonyConfigUpdateInstallReceiver: getConfigParser: domain=satellite
+10-18 13:03:49.517  3026  3349 V SatelliteController: satelliteConfigParser is not ready
+10-18 13:03:49.517  3026  3349 D SatelliteController: getCarrierRoamingNtnConnectTypeViaConfigUpdater: return null (satelliteConfig is null)
+10-18 13:03:49.518  3026  3349 D SatelliteController: getConfigForSubId: subId= 1, config= PersistableBundle[{satellite_esos_supported_bool=false, satellite_connection_hysteresis_sec_int=180, satellite_supported_disaster_plmn_string_array=[], regional_satellite_earfcn_bundle=PersistableBundle[{}], satellite_entitlement_supported_bool=true, satellite_supported_emergency_plmn_string_array=[], satellite_configs_per_plmn_bundle=PersistableBundle[{}], satellite_sos_max_datagram_size_bytes_int=255, satellite_supported_msg_apps_string_array=[com.google.android.apps.messaging], satellite_connected_notification_throttle_millis_int=604800000, override_satellite_as_unconstrained_bool=false, satellite_display_name_string=, satellite_roaming_p2p_sms_inactivity_timeout_sec_int=180, satellite_roaming_turn_off_session_for_emergency_call_bool=true, emergency_messaging_supported_bool=true, carrier_roaming_satellite_emergency_messaging_provider_per_country_bundle=PersistableBundle[{}], satellite_data_support_mode_int=0, carrier_roaming_ntn_connect_type_int=0, satellite_attach_supported_bool=false, carrier_roaming_satellite_emergency_messaging_redirection_destination_string=911, satellite_nidd_apn_name_string=, carrier_supported_satellite_services_per_provider_bundle=PersistableBundle[{310830=[2, 3, 6]}], satellite_roaming_esos_inactivity_timeout_sec_int=300, carrier_supported_satellite_notification_hysteresis_sec_int=180, carrier_config_applied_bool=true, carrier_roaming_ntn_emergency_call_to_satellite_handover_type_int=2, carrier_roaming_satellite_default_services_int_array=[2, 3, 6], imsserviceentitlement.entitlement_server_url_string=https://ts43.eas3.msg.t-mobile.com/google?, emergency_call_to_satellite_t911_handover_timeout_millis_int=30000, satellite_roaming_p2p_sms_supported_bool=false, carrier_config_version_string=, satellite_roaming_screen_off_inactivity_timeout_sec_int=30}]
+10-18 13:03:49.518  3026  3349 D SatelliteController: getCarrierRoamingNtnConnectType: Falling back to global carrier config connect type: 0
+10-18 13:03:49.518  3026  3349 D TelephonyConfigUpdateInstallReceiver: getConfigParser: domain=satellite
+10-18 13:03:49.518  3026  3349 V SatelliteController: satelliteConfigParser is not ready
+10-18 13:03:49.518  3026  3349 D SatelliteController: isSatelliteAttachSupportedViaConfigupdater: return null (satelliteConfig is null)
+10-18 13:03:49.518  3026  3349 D SatelliteController: getConfigForSubId: subId= 1, config= PersistableBundle[{satellite_esos_supported_bool=false, satellite_connection_hysteresis_sec_int=180, satellite_supported_disaster_plmn_string_array=[], regional_satellite_earfcn_bundle=PersistableBundle[{}], satellite_entitlement_supported_bool=true, satellite_supported_emergency_plmn_string_array=[], satellite_configs_per_plmn_bundle=PersistableBundle[{}], satellite_sos_max_datagram_size_bytes_int=255, satellite_supported_msg_apps_string_array=[com.google.android.apps.messaging], satellite_connected_notification_throttle_millis_int=604800000, override_satellite_as_unconstrained_bool=false, satellite_display_name_string=, satellite_roaming_p2p_sms_inactivity_timeout_sec_int=180, satellite_roaming_turn_off_session_for_emergency_call_bool=true, emergency_messaging_supported_bool=true, carrier_roaming_satellite_emergency_messaging_provider_per_country_bundle=PersistableBundle[{}], satellite_data_support_mode_int=0, carrier_roaming_ntn_connect_type_int=0, satellite_attach_supported_bool=false, carrier_roaming_satellite_emergency_messaging_redirection_destination_string=911, satellite_nidd_apn_name_string=, carrier_supported_satellite_services_per_provider_bundle=PersistableBundle[{310830=[2, 3, 6]}], satellite_roaming_esos_inactivity_timeout_sec_int=300, carrier_supported_satellite_notification_hysteresis_sec_int=180, carrier_config_applied_bool=true, carrier_roaming_ntn_emergency_call_to_satellite_handover_type_int=2, carrier_roaming_satellite_default_services_int_array=[2, 3, 6], imsserviceentitlement.entitlement_server_url_string=https://ts43.eas3.msg.t-mobile.com/google?, emergency_call_to_satellite_t911_handover_timeout_millis_int=30000, satellite_roaming_p2p_sms_supported_bool=false, carrier_config_version_string=, satellite_roaming_screen_off_inactivity_timeout_sec_int=30}]
+10-18 13:03:49.518  3026  3349 D SatelliteController: isSatelliteSupportedViaCarrier: using CarrierConfig for subId=1, isAttachSupported=false
+10-18 13:03:49.518  3026  3349 D SatelliteController: isInSatelliteModeForCarrierRoaming: subId=1, connectType=0, result=false
+10-18 13:03:49.572   551   551 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:49.579   806  2871 D BinderStats: Reporting dropped stats: seen=89, total=50, qFull=0, bFull=0, delayed=0, overflow=0, noSvc=0, badData=0, minBFull=0, jvmErr=0, reportFail=0, timeMonitoredMillisHrs=8.448195E-4
+10-18 13:03:49.578   551   582 W skia    : AGTM parsing failed flags.readFromStream(s) at 159
+10-18 13:03:49.742  5516  5516 E libnfc_nci: Timeout waiting for NFC AIDL service (future).
+10-18 13:03:49.742  5516  5516 I libnfc_nci: NfcAdaptation::InitializeHalDeviceContext: Failed to retrieve the NFC AIDL!
+10-18 13:03:49.742  5516  5516 E libnfc_nci: Exit current process to recover.
+10-18 13:03:49.756   806  2811 I ActivityManager: Process com.google.android.nfc (pid 5516) has died: pers PER 
+10-18 13:03:49.745   491   491 I Zygote  : Process 5516 exited cleanly (0)
+10-18 13:03:49.760   806   874 I libprocessgroup: Removed cgroup /sys/fs/cgroup/system/uid_1027/pid_5516
+10-18 13:03:49.759   806  2811 W ActivityManager: Re-adding persistent process ProcessRecord{eb12b8a 5516:com.google.android.nfc/1027}
+10-18 13:03:49.759   806  2811 V GrammaticalInflectionUtils: AttributionSource: AttributionSource { uid = 1027, packageName = null, attributionTag = null, token = android.os.Binder@370701f, deviceId = 0, next = null } does not have READ_SYSTEM_GRAMMATICAL_GENDER permission.
+10-18 13:03:49.770   491   491 D Zygote  : Forked child process 5612
+10-18 13:03:49.786   806   873 I ActivityManager: Start proc 5612:com.google.android.nfc/1027 for restart com.google.android.nfc
+10-18 13:03:49.789  5612  5612 I libprocessgroup: Created cgroup /sys/fs/cgroup/system/uid_1027/pid_5612
+10-18 13:03:49.856  5612  5612 I Zygote  : Process 5612 created for com.google.android.nfc
+10-18 13:03:49.857  5612  5612 I gle.android.nfc: Using generational CollectorTypeCMC GC.
+10-18 13:03:49.863  5612  5612 W gle.android.nfc: Unexpected CPU variant for x86: x86_64.
+10-18 13:03:49.863  5612  5612 W gle.android.nfc: Known variants: atom, sandybridge, silvermont, goldmont, goldmont-plus, goldmont-without-sha-xsaves, tremont, kabylake, alderlake, pantherlake, default
+10-18 13:03:49.877  5612  5612 D nativeloader: Load libframework-connectivity-tiramisu-jni.so using APEX ns com_android_tethering for caller /apex/com.android.tethering/javalib/framework-connectivity-t.jar: ok
+10-18 13:03:49.896  5612  5612 D CompatChangeReporter: Compat change id reported: 333566037; UID 1027; state: ENABLED
+10-18 13:03:49.903  5612  5612 D nativeloader: Configuring clns-shared-9 for other apk /apex/com.android.nfcservices/priv-app/NfcNciApexGoogle@CP41.260828.004.A7/NfcNciApexGoogle.apk. target_sdk_version=37, uses_libraries=, library_path=/apex/com.android.nfcservices/priv-app/NfcNciApexGoogle@CP41.260828.004.A7/lib/x86_64:/system/lib64:/system_ext/lib64, permitted_path=/data:/mnt/expand:/data/user_de/0/com.google.android.nfc:/apex/com.android.nfcservices/priv-app/NfcNciApexGoogle@CP41.260828.004.A7:/system/lib64:/system_ext/lib64
+10-18 13:03:49.907  5612  5612 D nativeloader: InitApexLibraries:
+10-18 13:03:49.907  5612  5612 D nativeloader:   com_android_adservices: libhpke_jni.so:libtflite_support_classifiers_native.so
+10-18 13:03:49.907  5612  5612 D nativeloader:   com_android_appsearch: libappsearchservice.so:libicing_anywhere.so
+10-18 13:03:49.907  5612  5612 D nativeloader:   com_android_art: libartservice.so
+10-18 13:03:49.907  5612  5612 D nativeloader:   com_android_bt: libbluetooth_jni.so
+10-18 13:03:49.907  5612  5612 D nativeloader:   com_android_conscrypt: libjavacrypto.so
+10-18 13:03:49.907  5612  5612 D nativeloader:   com_android_extservices: libtflite_support_classifiers_native.so
+10-18 13:03:49.907  5612  5612 D nativeloader:   com_android_mediaprovider: libpdfclient.so
+10-18 13:03:49.907  5612  5612 D nativeloader:   com_android_nfcservices: libnfc_nci_jni.so:libnfc_rust_jni.so
+10-18 13:03:49.907  5612  5612 D nativeloader:   com_android_npumanager: libnpumanager_service_jni.so
+10-18 13:03:49.907  5612  5612 D nativeloader:   com_android_ondevicepersonalization: libfcp_cpp_dep_jni.so:libfcp_hpke_jni.so
+10-18 13:03:49.907  5612  5612 D nativeloader:   com_android_os_statsd: libstats_jni.so
+10-18 13:03:49.907  5612  5612 D nativeloader:   com_android_profiling: libanomaly_detector_service_jni.so
+10-18 13:03:49.907  5612  5612 D nativeloader:   com_android_tethering: libandroid_net_connectivity_com_android_net_module_util_jni.so:libandroid_net_connectivity_com_android_net_module_util_jni_CommonConnectivityJni.so:libcrypto_httpengine.so:libframework-connectivity-jni.so:libframework-connectivity-tiramisu-jni.so:libhttpengine.so:libservice-connectivity.so:libservice
+10-18 13:03:49.915  5612  5612 D ActivityThread: Set OS env TMPDIR to /data/user_de/0/com.google.android.nfc/cache
+10-18 13:03:49.918  5612  5612 V GraphicsEnvironment: Currently set values for:
+10-18 13:03:49.918  5612  5612 V GraphicsEnvironment:   angle_gl_driver_selection_pkgs=[]
+10-18 13:03:49.918  5612  5612 V GraphicsEnvironment:   angle_gl_driver_selection_values=[]
+10-18 13:03:49.918  5612  5612 V GraphicsEnvironment: com.google.android.nfc is not listed in per-application setting
+10-18 13:03:49.918  5612  5612 V GraphicsEnvironment: No special selections for ANGLE, returning default driver choice
+10-18 13:03:49.918  5612  5612 V GraphicsEnvironment: Neither updatable production driver nor prerelease driver is supported.
+10-18 13:03:49.923  5612  5612 D CompatChangeReporter: Compat change id reported: 407952621; UID 1027; state: ENABLED
+10-18 13:03:49.923  5612  5612 D CompatChangeReporter: Compat change id reported: 419020719; UID 1027; state: ENABLED
+10-18 13:03:49.948  5612  5612 I RegisteredComponentCache: generateComponentsList: New Components => 
+10-18 13:03:49.948  5612  5612 I RegisteredComponentCache: ComponentInfo: ResolveInfo{9a3f058 com.google.android.tag/com.android.apps.tag.TagViewer m=0x108000 userHandle=UserHandle{0}}, techs: android.nfc.tech.Ndef, 
+10-18 13:03:49.948  5612  5612 I RegisteredComponentCache: generateComponentsList: Removed Components => 
+10-18 13:03:49.949  5612  5638 D CompatChangeReporter: Compat change id reported: 458413887; UID 1027; state: ENABLED
+10-18 13:03:49.961  5612  5639 I NfcEventLog: readListFromLogFile: No NFC events found in log file
+10-18 13:03:49.966  5612  5612 I NfcService: Starting NFC service
+10-18 13:03:49.967  5612  5612 I NativeNfcManager: Loading C NFC Support
+10-18 13:03:49.976  5612  5612 D nativeloader: Load libnfc_nci_jni.so using class loader ns clns-shared-9 (caller=/apex/com.android.nfcservices/priv-app/NfcNciApexGoogle@CP41.260828.004.A7/NfcNciApexGoogle.apk): ok
+10-18 13:03:49.976  5612  5612 I libnfc_nci: JNI_OnLoad: NFC Service: loading nci JNI
+10-18 13:03:49.978  5612  5612 I libnfc_nci: ConfigFile - Parsing file '/etc/libnfc-nci.conf'
+10-18 13:03:49.978  5612  5612 I libnfc_nci: ConfigFile - [NFC_DEBUG_ENABLED] = 0
+10-18 13:03:49.978  5612  5612 I libnfc_nci: ConfigFile - [NFA_STORAGE] = "/data/nfc"
+10-18 13:03:49.978  5612  5612 I libnfc_nci: ConfigFile - [PRESERVE_STORAGE] = 0x01
+10-18 13:03:49.978  5612  5612 I libnfc_nci: ConfigFile - [POLLING_TECH_MASK] = 0x0F
+10-18 13:03:49.978  5612  5612 I libnfc_nci: ConfigFile - [UICC_LISTEN_TECH_MASK] = 0x07
+10-18 13:03:49.978  5612  5612 I libnfc_nci: ConfigFile - [NFA_MAX_EE_SUPPORTED] = 0x02
+10-18 13:03:49.978  5612  5612 I libnfc_nci: ConfigFile - [AID_FOR_EMPTY_SELECT] = {08:A0:00:00:01:51:00:00:00}
+10-18 13:03:49.979  5612  5612 I libnfc_nci: ConfigFile - [AID_MATCHING_MODE] = 0x01
+10-18 13:03:49.979  5612  5612 I libnfc_nci: ConfigFile - [NCI_RESET_TYPE] = 0x00
+10-18 13:03:49.979  5612  5612 I libnfc_nci: ConfigFile - [PRESENCE_CHECK_RETRY_COUNT] = 0
+10-18 13:03:49.980  5612  5612 I libnfc_nci: ConfigFile - [EUICC_MEP_MODE] = 0x03
+10-18 13:03:49.980  5612  5612 I libnfc_nci: ConfigFile - [NFCEE_EVENT_RF_DISCOVERY_OPTION] = 0x00
+10-18 13:03:49.980  5612  5612 I libnfc_nci: ConfigFile - [OPTIMIZE_ROUTING_TABLE_UPDATE] = 0x00
+10-18 13:03:49.980  5612  5612 I libnfc_nci: ConfigFile - [NFA_EE_ROUTE_DEBOUNCE_TIMER] = 0x01
+10-18 13:03:49.981  5612  5612 I libnfc_nci: ConfigFile - [KOVIO_PRESENCE_CHECK_TYPE] = 0x00
+10-18 13:03:49.981  5612  5612 I libnfc_nci: ConfigFile - [RECOVERY_OPTION] = 1
+10-18 13:03:49.981  5612  5612 I libnfc_nci: NfcAdaptation:440
+10-18 13:03:49.981  5612  5612 I libnfc_nci: NfcAdaptation::InitializeHalDeviceContext: INfc::getService()
+10-18 13:03:49.983   319   319 I hwservicemanager: getTransport: Cannot find entry android.hardware.nfc@1.2::INfc/default in either framework or device VINTF manifest.
+10-18 13:03:49.988   319   319 I hwservicemanager: getTransport: Cannot find entry android.hardware.nfc@1.1::INfc/default in either framework or device VINTF manifest.
+10-18 13:03:49.988   319   319 I hwservicemanager: getTransport: Cannot find entry android.hardware.nfc@1.0::INfc/default in either framework or device VINTF manifest.
+10-18 13:03:49.987   806  5875 E TaskPersister: File error accessing recents directory (directory doesn't exist?).
+10-18 13:03:50.002   318  5641 W libc    : Unable to set property "ctl.interface_start" to "aidl/android.hardware.nfc.INfc/default": PROP_ERROR_HANDLE_CONTROL_MESSAGE (0x20)
+10-18 13:03:49.939     0     0 I servicemanager: Caller(pid=5612,uid=1027,sid=u:r:nfc:s0) Since 'android.hardware.nfc.INfc/default' could not be found trying to start it as a lazy AIDL service. (if it's not configured to be a lazy service, it may be stuck starting or still starting).
+10-18 13:03:49.946     0     0 E init    : Control message: Could not find 'aidl/android.hardware.nfc.INfc/default' for ctl.interface_start from pid: 318 (/system/bin/servicemanager)
+10-18 13:03:49.962     0     0 I servicemanager: Caller(pid=5612,uid=1027,sid=u:r:nfc:s0) Tried to start aidl service android.hardware.nfc.INfc/default as a lazy service, but was unable to. Usually this happens when a service is not installed, but if the service is intended to be used as a lazy service, then it may be configured incorrectly.
+10-18 13:03:50.356   806  4033 W libbinder.ServiceManagerCppClient: Waited one second for android.hardware.uwb.IUwb/default (is service started? Number of threads started in the threadpool: 32. Are binder threads started and available?)
+10-18 13:03:50.305     0     0 I servicemanager: Caller(pid=806,uid=1000,sid=u:r:system_server:s0) Since 'android.hardware.uwb.IUwb/default' could not be found trying to start it as a lazy AIDL service. (if it's not configured to be a lazy service, it may be stuck starting or still starting).
+10-18 13:03:50.316     0     0 E init    : Control message: Could not find 'aidl/android.hardware.uwb.IUwb/default' for ctl.interface_start from pid: 318 (/system/bin/servicemanager)
+10-18 13:03:50.333     0     0 I servicemanager: Caller(pid=806,uid=1000,sid=u:r:system_server:s0) Tried to start aidl service android.hardware.uwb.IUwb/default as a lazy service, but was unable to. Usually this happens when a service is not installed, but if the service is intended to be used as a lazy service, then it may be configured incorrectly.
+10-18 13:03:50.373   318  5642 W libc    : Unable to set property "ctl.interface_start" to "aidl/android.hardware.uwb.IUwb/default": PROP_ERROR_HANDLE_CONTROL_MESSAGE (0x20)
+10-18 13:03:51.006  5612  5640 W libbinder.ServiceManagerCppClient: Waited one second for android.hardware.nfc.INfc/default (is service started? Number of threads started in the threadpool: 16. Are binder threads started and available?)
+10-18 13:03:51.015   318  5643 W libc    : Unable to set property "ctl.interface_start" to "aidl/android.hardware.nfc.INfc/default": PROP_ERROR_HANDLE_CONTROL_MESSAGE (0x20)
+10-18 13:03:50.954     0     0 I servicemanager: Caller(pid=5612,uid=1027,sid=u:r:nfc:s0) Since 'android.hardware.nfc.INfc/default' could not be found trying to start it as a lazy AIDL service. (if it's not configured to be a lazy service, it may be stuck starting or still starting).
+10-18 13:03:50.960     0     0 E init    : Control message: Could not find 'aidl/android.hardware.nfc.INfc/default' for ctl.interface_start from pid: 318 (/system/bin/servicemanager)
+10-18 13:03:50.975     0     0 I servicemanager: Caller(pid=5612,uid=1027,sid=u:r:nfc:s0) Tried to start aidl service android.hardware.nfc.INfc/default as a lazy service, but was unable to. Usually this happens when a service is not installed, but if the service is intended to be used as a lazy service, then it may be configured incorrectly.
+10-18 13:03:51.131   575   575 I adbd    : adbd service requested 'shell,v2,TERM=xterm:export ANDROID_LOG_TAGS=''; exec logcat '-d' '-v' 'threadtime''
+10-18 13:03:51.113     0     0 I logd    : logdr: UID=2000 GID=2000 PID=5644 n tail=0 logMask=99 pid=0 start=0ns deadline=0ns
