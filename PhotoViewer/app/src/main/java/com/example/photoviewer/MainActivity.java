@@ -1,4 +1,3 @@
-
 package com.example.photoviewer;
 
 import android.content.Intent;
@@ -36,7 +35,8 @@ public class MainActivity extends AppCompatActivity {
 
     private static final String API_URL =
             "https://neji.pythonanywhere.com/api_root/Post/";
-    private static final String SERVER_URL = "https://neji.pythonanywhere.com";
+    private static final String SERVER_URL =
+            "https://neji.pythonanywhere.com";
     private static final String AUTHOR_ID = "1";
     private static final int PICK_IMAGE = 1001;
 
@@ -44,11 +44,15 @@ public class MainActivity extends AppCompatActivity {
     private TextView statusText;
     private EditText titleInput;
     private EditText textInput;
+    private EditText searchInput;
+    private ImageView previewImage;
     private Button chooseButton;
     private Button uploadButton;
     private Button syncButton;
     private ProgressBar progressBar;
+
     private Uri selectedImageUri;
+    private JSONArray allPosts = new JSONArray();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,6 +97,14 @@ public class MainActivity extends AppCompatActivity {
         chooseButton.setText("Choose Image");
         root.addView(chooseButton);
 
+        // Feature 2: Image preview before uploading
+        previewImage = new ImageView(this);
+        previewImage.setAdjustViewBounds(true);
+        previewImage.setScaleType(ImageView.ScaleType.FIT_CENTER);
+        previewImage.setMaxHeight(dp(180));
+        previewImage.setVisibility(View.GONE);
+        root.addView(previewImage);
+
         uploadButton = new Button(this);
         uploadButton.setText("Upload Post");
         root.addView(uploadButton);
@@ -114,6 +126,13 @@ public class MainActivity extends AppCompatActivity {
         postsHeading.setPadding(0, dp(12), 0, dp(6));
         root.addView(postsHeading);
 
+        // feature 1 Search detection history
+        searchInput = new EditText(this);
+        searchInput.setSingleLine(true);
+        searchInput.setHint(
+                "Search by object name (person, dog, car...)");
+        root.addView(searchInput);
+
         ScrollView scrollView = new ScrollView(this);
         scrollView.setFillViewport(false);
 
@@ -130,7 +149,24 @@ public class MainActivity extends AppCompatActivity {
         uploadButton.setOnClickListener(v -> uploadPost());
         syncButton.setOnClickListener(v -> loadPosts());
 
-        // Show the UI immediately; load data afterward.
+        // filter posts whenever the search text changes.
+        searchInput.addTextChangedListener(new android.text.TextWatcher() {
+            @Override
+            public void beforeTextChanged(
+                    CharSequence s, int start, int count, int after) {
+            }
+
+            @Override
+            public void onTextChanged(
+                    CharSequence s, int start, int before, int count) {
+                displayFilteredPosts(s.toString());
+            }
+
+            @Override
+            public void afterTextChanged(android.text.Editable s) {
+            }
+        });
+
         loadPosts();
     }
 
@@ -154,7 +190,8 @@ public class MainActivity extends AppCompatActivity {
         try {
             startActivityForResult(intent, PICK_IMAGE);
         } catch (Exception e) {
-            statusText.setText("Cannot open image picker: " + e.getMessage());
+            statusText.setText(
+                    "Cannot open image picker: " + e.getMessage());
         }
     }
 
@@ -165,27 +202,47 @@ public class MainActivity extends AppCompatActivity {
 
         if (requestCode == PICK_IMAGE && resultCode == RESULT_OK
                 && data != null && data.getData() != null) {
+
             selectedImageUri = data.getData();
-            statusText.setText("Selected: " + getFileName(selectedImageUri));
+
+            // feature 2 display the selected image before uploading.
+            try {
+                getContentResolver().takePersistableUriPermission(
+                        selectedImageUri,
+                        Intent.FLAG_GRANT_READ_URI_PERMISSION);
+            } catch (Exception ignored) {
+            }
+
+            previewImage.setImageURI(selectedImageUri);
+            previewImage.setVisibility(View.VISIBLE);
+
+            statusText.setText(
+                    "Selected: " + getFileName(selectedImageUri));
         }
     }
 
     private String getFileName(Uri uri) {
         try (Cursor cursor = getContentResolver().query(
                 uri, null, null, null, null)) {
+
             if (cursor != null && cursor.moveToFirst()) {
                 int index = cursor.getColumnIndex(
                         OpenableColumns.DISPLAY_NAME);
+
                 if (index >= 0) {
                     String name = cursor.getString(index);
-                    if (name != null && !name.isEmpty()) return name;
+                    if (name != null && !name.isEmpty()) {
+                        return name;
+                    }
                 }
             }
         } catch (Exception ignored) {
         }
+
         return "upload.jpg";
     }
 
+    // Upload a post to the Django server.
     private void uploadPost() {
         String title = titleInput.getText().toString().trim();
         String description = textInput.getText().toString().trim();
@@ -201,6 +258,8 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
 
+        final Uri imageToUpload = selectedImageUri;
+
         setBusy(true);
         statusText.setText("Uploading post...");
 
@@ -208,26 +267,37 @@ public class MainActivity extends AppCompatActivity {
             HttpURLConnection connection = null;
 
             try {
-                String boundary = "----PhotoViewer" + System.currentTimeMillis();
-                connection = (HttpURLConnection) new URL(API_URL).openConnection();
+                String boundary =
+                        "----PhotoViewer" + System.currentTimeMillis();
+
+                connection = (HttpURLConnection)
+                        new URL(API_URL).openConnection();
+
                 connection.setRequestMethod("POST");
                 connection.setConnectTimeout(15000);
                 connection.setReadTimeout(20000);
                 connection.setDoOutput(true);
+
                 connection.setRequestProperty("Content-Type",
                         "multipart/form-data; boundary=" + boundary);
-                connection.setRequestProperty("Accept", "application/json");
+                connection.setRequestProperty(
+                        "Accept", "application/json");
 
                 try (OutputStream out = connection.getOutputStream()) {
+
                     writeField(out, boundary, "author", AUTHOR_ID);
                     writeField(out, boundary, "title", title);
                     writeField(out, boundary, "text", description);
 
-                    String fileName = getFileName(selectedImageUri)
+                    String fileName = getFileName(imageToUpload)
                             .replace("\"", "");
+
                     String mime = getContentResolver()
-                            .getType(selectedImageUri);
-                    if (mime == null) mime = "image/jpeg";
+                            .getType(imageToUpload);
+
+                    if (mime == null) {
+                        mime = "image/jpeg";
+                    }
 
                     writeText(out, "--" + boundary + "\r\n"
                             + "Content-Disposition: form-data; name=\"image\"; "
@@ -235,23 +305,30 @@ public class MainActivity extends AppCompatActivity {
                             + "Content-Type: " + mime + "\r\n\r\n");
 
                     try (InputStream in = getContentResolver()
-                            .openInputStream(selectedImageUri)) {
+                            .openInputStream(imageToUpload)) {
+
                         if (in == null) {
-                            throw new Exception("Cannot read selected image");
+                            throw new Exception(
+                                    "Cannot read selected image");
                         }
+
                         byte[] buffer = new byte[8192];
                         int count;
+
                         while ((count = in.read(buffer)) != -1) {
                             out.write(buffer, 0, count);
                         }
                     }
+
                     writeText(out, "\r\n--" + boundary + "--\r\n");
                 }
 
                 int code = connection.getResponseCode();
+
                 InputStream response = code >= 200 && code < 300
                         ? connection.getInputStream()
                         : connection.getErrorStream();
+
                 String body = readStream(response);
 
                 if (code == 201 || code == 200) {
@@ -259,42 +336,62 @@ public class MainActivity extends AppCompatActivity {
                         titleInput.setText("");
                         textInput.setText("");
                         selectedImageUri = null;
+
+                        // Clear the image preview after successful upload.
+                        previewImage.setImageDrawable(null);
+                        previewImage.setVisibility(View.GONE);
+
                         statusText.setText("Upload successful!");
+
                         Toast.makeText(this, "Post uploaded",
                                 Toast.LENGTH_SHORT).show();
+
                         loadPosts();
                     });
                 } else {
-                    showError("Upload failed (HTTP " + code + "): " + body);
+                    showError(
+                            "Upload failed (HTTP " + code + "): " + body);
                 }
+
             } catch (Exception e) {
                 showError("Upload failed: " + e.getMessage());
+
             } finally {
-                if (connection != null) connection.disconnect();
+                if (connection != null) {
+                    connection.disconnect();
+                }
             }
         }).start();
     }
 
     private void writeField(OutputStream out, String boundary,
                             String name, String value) throws Exception {
+
         writeText(out, "--" + boundary + "\r\n"
                 + "Content-Disposition: form-data; name=\"" + name + "\"\r\n\r\n"
                 + value + "\r\n");
     }
 
-    private void writeText(OutputStream out, String value) throws Exception {
+    private void writeText(OutputStream out, String value)
+            throws Exception {
         out.write(value.getBytes(StandardCharsets.UTF_8));
     }
 
     private String readStream(InputStream input) throws Exception {
-        if (input == null) return "";
+        if (input == null) {
+            return "";
+        }
+
         try (InputStream in = input;
              ByteArrayOutputStream bytes = new ByteArrayOutputStream()) {
+
             byte[] buffer = new byte[4096];
             int count;
+
             while ((count = in.read(buffer)) != -1) {
                 bytes.write(buffer, 0, count);
             }
+
             return bytes.toString("UTF-8");
         }
     }
@@ -306,6 +403,7 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    // Retrieve posts from PythonAnywhere.
     private void loadPosts() {
         setBusy(true);
         statusText.setText("Loading posts...");
@@ -315,45 +413,98 @@ public class MainActivity extends AppCompatActivity {
             HttpURLConnection connection = null;
 
             try {
-                connection = (HttpURLConnection) new URL(API_URL).openConnection();
+                android.util.Log.d(
+                        "PhotoViewer", "Trying to connect to: " + API_URL);
+
+                connection = (HttpURLConnection)
+                        new URL(API_URL).openConnection();
+
                 connection.setRequestMethod("GET");
                 connection.setConnectTimeout(10000);
                 connection.setReadTimeout(10000);
 
                 int code = connection.getResponseCode();
+
                 if (code != HttpURLConnection.HTTP_OK) {
-                    throw new Exception("Server returned HTTP " + code);
+                    throw new Exception(
+                            "Server returned HTTP " + code);
                 }
 
                 JSONArray posts;
+
                 try (InputStream input = connection.getInputStream()) {
                     posts = new JSONArray(readStream(input));
                 }
 
+                android.util.Log.d(
+                        "PhotoViewer", "Posts received: " + posts.length());
+
                 runOnUiThread(() -> {
-                    for (int i = 0; i < posts.length(); i++) {
-                        try {
-                            addPost(posts.getJSONObject(i));
-                        } catch (Exception e) {
-                            addMessage("Could not display a post.");
-                        }
-                    }
-                    statusText.setText("Sync complete: "
-                            + posts.length() + " posts");
+                    allPosts = posts;
+
+                    // Display all posts or apply the current search.
+                    displayFilteredPosts(
+                            searchInput.getText().toString());
+
+                    statusText.setText(
+                            "Sync complete: " + posts.length() + " posts");
+
                     setBusy(false);
                 });
+
             } catch (Exception e) {
+                android.util.Log.e(
+                        "PhotoViewer", "Failed to load posts", e);
+
                 runOnUiThread(() -> {
-                    statusText.setText("Connection failed: "
-                            + e.getMessage());
+                    statusText.setText(
+                            "Connection failed: " + e.getMessage());
                     setBusy(false);
                 });
+
             } finally {
-                if (connection != null) connection.disconnect();
+                if (connection != null) {
+                    connection.disconnect();
+                }
             }
         }).start();
     }
 
+    // Feature 1: Filter posts by title or description.
+    private void displayFilteredPosts(String query) {
+        postsContainer.removeAllViews();
+
+        String search = query.trim().toLowerCase();
+        int displayedCount = 0;
+
+        for (int i = 0; i < allPosts.length(); i++) {
+            try {
+                JSONObject post = allPosts.getJSONObject(i);
+
+                String title = post.optString("title", "");
+                String description = post.optString("text", "");
+
+                String searchableText =
+                        (title + " " + description).toLowerCase();
+
+                if (search.isEmpty()
+                        || searchableText.contains(search)) {
+
+                    addPost(post);
+                    displayedCount++;
+                }
+
+            } catch (Exception e) {
+                addMessage("Could not display a post.");
+            }
+        }
+
+        if (displayedCount == 0) {
+            addMessage("No matching posts found.");
+        }
+    }
+
+    // Display one post and its image.
     private void addPost(JSONObject post) {
         LinearLayout card = new LinearLayout(this);
         card.setOrientation(LinearLayout.VERTICAL);
@@ -380,10 +531,16 @@ public class MainActivity extends AppCompatActivity {
         postsContainer.addView(card);
 
         String imageUrl = post.optString("image", "");
+
         if (!imageUrl.isEmpty() && !imageUrl.equals("null")) {
+
             if (imageUrl.startsWith("/")) {
                 imageUrl = SERVER_URL + imageUrl;
             }
+
+            android.util.Log.d(
+                    "PhotoViewer", "Loading image: " + imageUrl);
+
             loadImage(imageUrl, image);
         }
     }
@@ -391,23 +548,32 @@ public class MainActivity extends AppCompatActivity {
     private void loadImage(String imageUrl, ImageView imageView) {
         new Thread(() -> {
             HttpURLConnection connection = null;
+
             try {
                 connection = (HttpURLConnection)
                         new URL(imageUrl).openConnection();
+
                 connection.setConnectTimeout(10000);
                 connection.setReadTimeout(10000);
 
                 try (InputStream input = connection.getInputStream()) {
                     Bitmap bitmap = BitmapFactory.decodeStream(input);
+
                     if (bitmap != null) {
-                        runOnUiThread(() -> imageView.setImageBitmap(bitmap));
+                        runOnUiThread(
+                                () -> imageView.setImageBitmap(bitmap));
                     }
                 }
+
             } catch (Exception e) {
-                android.util.Log.e("PhotoViewer",
+                android.util.Log.e(
+                        "PhotoViewer",
                         "Image load failed: " + imageUrl, e);
+
             } finally {
-                if (connection != null) connection.disconnect();
+                if (connection != null) {
+                    connection.disconnect();
+                }
             }
         }).start();
     }
@@ -416,6 +582,7 @@ public class MainActivity extends AppCompatActivity {
         TextView text = new TextView(this);
         text.setText(message);
         text.setTextColor(Color.DKGRAY);
+        text.setPadding(0, dp(8), 0, dp(8));
         postsContainer.addView(text);
     }
 }
