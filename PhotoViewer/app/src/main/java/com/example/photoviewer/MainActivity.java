@@ -97,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
         chooseButton.setText("Choose Image");
         root.addView(chooseButton);
 
-        // Feature 2: Image preview before uploading
+        // feature 2 image preview before uploading
         previewImage = new ImageView(this);
         previewImage.setAdjustViewBounds(true);
         previewImage.setScaleType(ImageView.ScaleType.FIT_CENTER);
@@ -126,7 +126,7 @@ public class MainActivity extends AppCompatActivity {
         postsHeading.setPadding(0, dp(12), 0, dp(6));
         root.addView(postsHeading);
 
-        // feature 1 Search detection history
+        // feature 1 search detection history
         searchInput = new EditText(this);
         searchInput.setSingleLine(true);
         searchInput.setHint(
@@ -149,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
         uploadButton.setOnClickListener(v -> uploadPost());
         syncButton.setOnClickListener(v -> loadPosts());
 
-        // filter posts whenever the search text changes.
+        // filter posts whenever the search text changes
         searchInput.addTextChangedListener(new android.text.TextWatcher() {
             @Override
             public void beforeTextChanged(
@@ -205,7 +205,7 @@ public class MainActivity extends AppCompatActivity {
 
             selectedImageUri = data.getData();
 
-            // feature 2 display the selected image before uploading.
+            // feature 2 display the selected image before uploading
             try {
                 getContentResolver().takePersistableUriPermission(
                         selectedImageUri,
@@ -242,7 +242,6 @@ public class MainActivity extends AppCompatActivity {
         return "upload.jpg";
     }
 
-    // Upload a post to the Django server.
     private void uploadPost() {
         String title = titleInput.getText().toString().trim();
         String description = textInput.getText().toString().trim();
@@ -337,7 +336,7 @@ public class MainActivity extends AppCompatActivity {
                         textInput.setText("");
                         selectedImageUri = null;
 
-                        // Clear the image preview after successful upload.
+                        // clear the image preview after successful upload
                         previewImage.setImageDrawable(null);
                         previewImage.setVisibility(View.GONE);
 
@@ -403,7 +402,6 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    // Retrieve posts from PythonAnywhere.
     private void loadPosts() {
         setBusy(true);
         statusText.setText("Loading posts...");
@@ -442,7 +440,6 @@ public class MainActivity extends AppCompatActivity {
                 runOnUiThread(() -> {
                     allPosts = posts;
 
-                    // Display all posts or apply the current search.
                     displayFilteredPosts(
                             searchInput.getText().toString());
 
@@ -470,7 +467,7 @@ public class MainActivity extends AppCompatActivity {
         }).start();
     }
 
-    // Feature 1: Filter posts by title or description.
+    // feature 1 filter posts by title or description.
     private void displayFilteredPosts(String query) {
         postsContainer.removeAllViews();
 
@@ -504,7 +501,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    // Display one post and its image.
     private void addPost(JSONObject post) {
         LinearLayout card = new LinearLayout(this);
         card.setOrientation(LinearLayout.VERTICAL);
